@@ -289,20 +289,24 @@ header {
     transform: translateY(-3px) scale(1.02);
 }
 
-/* MODIFICATION START: Center Main Content */
+/* MODIFICATION START: Centering the Main Content Grid */
 #main-content {
     display: grid;
-    /* Use max-content to size columns based on content, keeping them grouped */
+    /* Use a fixed column setup for consistent sizing, or flexible as before */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 50px 5%;
     background: var(--content-bg);
     backdrop-filter: blur(5px);
     transition: background 0.5s;
-    /* Added max-width and margin:auto for centering */
-    max-width: 1400px; /* Limit width for better reading */
-    margin: 0 auto; 
+    
+    /* === CENTER THE GRID CONTAINER === */
+    max-width: 1000px; /* Set a specific max width (adjust as needed, 1000px looks good for 3 boxes) */
+    width: 90%; /* Ensure it's responsive but doesn't fill the whole screen */
+    margin: 0 auto; /* This is the key for centering the container */
+    /* ================================= */
 }
+
 .content-section {
     background: var(--section-bg);
     padding: 30px;
@@ -310,8 +314,10 @@ header {
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     border-top: 3px solid var(--yellow-highlight);
     transition: transform 0.3s;
-    /* ADDED: Centering text within the section titles */
-    text-align: center;
+    text-align: left; /* Keep text alignment left inside the boxes */
+}
+.content-section:hover {
+    transform: translateY(-5px);
 }
 .content-section h3 {
     font-family: 'Orbitron', sans-serif;
@@ -322,8 +328,7 @@ header {
     padding-bottom: 10px;
 }
 .tracker-link {
-    /* REMOVED: display: block; to make inline-block for centering */
-    display: inline-block;
+    display: block; /* Links are blocks again to fill the box */
     text-decoration: none;
     background: var(--medium-dark);
     color: var(--text-light);
@@ -333,19 +338,13 @@ header {
     border-left: 5px solid var(--dark-green);
     transition: background 0.2s, border-left 0.2s;
     font-weight: 600;
-    width: 90%; /* Maintain link width for a block-like appearance */
-    max-width: 350px; /* Optional: limit width on large screens */
 }
-/* Center the container for the links within content-section */
-.content-section > .tracker-link:first-of-type {
-    margin-top: 15px;
+.tracker-link:hover {
+    background: rgba(152, 251, 152, 0.1);
+    color: var(--yellow-highlight);
+    border-left-color: var(--yellow-highlight);
 }
-.content-section {
-    /* New: Allow links inside to center */
-    text-align: center;
-}
-/* MODIFICATION END: Center Main Content */
-
+/* MODIFICATION END */
 
 /* --- UTILITY BLOCK (Time/Converter/QR) --- */
 .utility-block {
@@ -368,14 +367,12 @@ header {
     border-bottom: 1px solid var(--dark-green);
     padding-bottom: 10px;
     margin-bottom: 15px;
-    text-align: center; /* Center utility block headers */
 }
 .time-display p {
     font-size: 1.1rem;
     margin: 8px 0;
     color: var(--yellow-highlight);
     font-family: 'Orbitron', sans-serif;
-    text-align: center; /* Center utility block content */
 }
 
 /* Converter Styling */
@@ -389,7 +386,6 @@ header {
 #converter label {
     font-size: 0.9rem;
     color: var(--text-gray);
-    text-align: left; /* Keep labels left-aligned for forms */
 }
 #converter input, #converter select {
     background: var(--deep-blue-black);
@@ -575,8 +571,13 @@ footer {
     #hero h1 { font-size: 2.5rem; }
     #main-content {
         grid-template-columns: 1fr; 
-        /* Reset margin on small screen if needed */
+        /* Reset margin on small screen */
         margin: 0;
+        width: 100%;
+        max-width: none;
+    }
+    .content-section {
+        margin: 0 5%;
     }
 }
 </style>
@@ -596,7 +597,7 @@ footer {
             allow="autoplay; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
     </iframe>
-    </div>
+</div>
 
 <header>
     <div class="header-left">
@@ -792,16 +793,15 @@ footer {
     const input = document.getElementById('visitor-name');
     const submitBtn = document.getElementById('submit-name');
 
-    // MODIFICATION: Ensure the overlay closes even if logVisitor fails (addressing previous i153 issue)
     submitBtn.addEventListener('click', () => {
         const name = input.value.trim();
         if(name === "") { alert("Please enter your name"); return; }
         
-        // 1. Close the overlay IMMEDIATELY
+        // 1. Close the overlay
         overlay.style.opacity = '0';
         setTimeout(() => { overlay.style.display = 'none'; }, 500);
 
-        // 2. Log visitor in the background (will not block UI)
+        // 2. Log visitor in the background
         logVisitor(name);
     });
 
@@ -830,10 +830,8 @@ function onPlayerReady(event) {
     event.target.mute(); 
     event.target.setLoop(true);
 
-    // MODIFICATION START: Set video quality to 720p 
-    // This requests the player to use the best quality available, up to 720p.
-    event.target.setPlaybackQuality('highres'); // Use 'highres' or 'hd720'
-    // MODIFICATION END
+    // Set video quality to 720p 
+    event.target.setPlaybackQuality('hd720');
 
     const muteToggle = document.getElementById('mute-toggle');
     
@@ -931,9 +929,7 @@ function updateOffsetOptions() {
     const offsetSelect = document.getElementById('offset');
     offsetSelect.innerHTML = '';
     let offsets = [];
-    // Adjusted AUS offset to be more standard/clear
     if(country === 'AUS') offsets = ['+05:30 (AEST/Daylight - If SL is +5:30)', '+04:30 (ACST/Standard - If SL is +5:30)']; 
-    // Adjusted UK offset to be more standard/clear
     else if(country === 'UK') offsets = ['+04:30 (GMT - If SL is +5:30)', '+05:30 (BST - If SL is +5:30)'];
     
     const defaultOpt = document.createElement('option');
@@ -964,14 +960,10 @@ function convert() {
     const sign = offsetStr[0] === '+' ? 1 : -1;
     const [oh, om] = offsetStr.slice(1).split(':').map(Number);
     
-    // Convert SL offset difference (example: SL=+5:30, UK=+4:30. Difference is 1 hour). 
-    // Since the offsets here are relative to SL (which is +5:30), 
-    // a positive offset means the selected country is AHEAD of SL.
     const offsetMinutes = sign * (oh*60 + om);
 
     let totalMins = hours*60 + minutes + offsetMinutes;
     
-    // Handles wrapping around 24 hours
     totalMins = (totalMins % 1440 + 1440) % 1440; 
     
     let h = Math.floor(totalMins / 60);
