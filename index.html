@@ -334,6 +334,15 @@ header {
     backdrop-filter: blur(5px);
     transition: background 0.5s;
 }
+
+/* NEW: Layout Toggle Classes */
+#main-content.desktop-layout {
+    grid-template-columns: repeat(3, minmax(300px, 1fr)) !important; 
+}
+#main-content.mobile-layout {
+    grid-template-columns: 1fr !important;
+}
+
 .content-section {
     /* Uses the transparent section background */
     background: var(--section-bg);
@@ -470,6 +479,8 @@ header {
     padding: 40px 30px;
     border-radius: 5px;
     border-top: 3px solid var(--light-green);
+    overflow: hidden; /* NEW: for the scroll effect */
+    max-height: 300px; /* NEW: Constraint height for the slide effect */
 }
 #image-gallery h3 {
     font-family: 'Orbitron', sans-serif;
@@ -478,24 +489,41 @@ header {
     margin-bottom: 25px;
     text-align: center;
 }
+
+/* MODIFIED: Gallery Grid for Sliding Animation */
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex; /* Change from grid to flex for horizontal layout */
+    width: max-content; /* Ensure the flex container is wide enough for all images */
     gap: 15px;
+    padding-bottom: 15px;
+    
+    /* Animation for slow, continuous, alternating movement */
+    animation: slide-show 30s linear infinite alternate; 
 }
 .gallery-grid img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    width: 300px; /* MODIFIED: Fixed width */
+    min-width: 300px; /* NEW: Ensure fixed width */
+    height: 180px; /* MODIFIED: Fixed height */
+    object-fit: contain; /* MODIFIED: To ensure full look and images don't cut */
+    background: var(--deep-blue-black); /* NEW: Background for 'contain' mode */
     border-radius: 5px;
-    opacity: 0.8;
-    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0.9;
+    transition: opacity 0.3s;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transform: none !important; /* NEW: Reset any scale that interferes with animation */
 }
 .gallery-grid img:hover {
     opacity: 1;
-    transform: scale(1.02);
+    transform: none; /* Ensure hover does not interfere */
 }
+
+/* NEW Keyframes for a slow, alternating slide */
+@keyframes slide-show {
+    /* Moves the track 40% of its total length to the left, then back (alternate) */
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-40%); } 
+}
+
 
 /* --- FOOTER --- */
 footer {
@@ -779,8 +807,14 @@ footer {
             👤
         </button>
         
+        <button id="privacy-toggle" class="icon-btn" aria-label="Privacy Policy & Data Notice">
+            🔒
+        </button>
         <button class="nav-btn" onclick="document.getElementById('main-content').scrollIntoView({ behavior: 'smooth' })">VIEW TRACKERS</button>
-    </div>
+        
+        <button class="nav-btn" onclick="scrollToConverter()">TIME CONVERTER</button>
+        <button id="layout-toggle" class="nav-btn" onclick="toggleLayoutMode()">Default Layout</button>
+        </div>
 </header>
 
 <section id="hero">
@@ -878,8 +912,7 @@ footer {
     </div>
     
     <div id="image-gallery">
-        <h3></h3>
-        <div class="gallery-grid">
+        <h3>Background Image Gallery</h3> <div class="gallery-grid">
             <img src="https://www.virtuallakedistrict.net/wp-content/uploads/2022/10/A-Guide-To-Horse-Racing.jpg" alt="Horse Racing Image 1">
             <img src="https://horseracinggift.co.uk/cdn/shop/files/AdobeStock_49474608_77d0e1d1-a2a7-4624-809a-b158df80ca20.jpg?v=1693395886&width=1500" alt="Horse Racing Image 2">
             <img src="https://static1.squarespace.com/static/517636f8e4b0cb4f8c8697ba/t/687270061c520f20fb77da16/1739740259252/Guernsey+Race+Club+L%27Ancresse+meeting+2019?format=1500w" alt="Horse Racing Image 3">
@@ -1071,6 +1104,41 @@ function scrollToBottom() {
     });
 }
 
+// NEW FUNCTION: Scroll to Converter
+function scrollToConverter() {
+    const converterSection = document.querySelector('.utility-block');
+    if (converterSection) {
+        converterSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// NEW FUNCTION: Layout Toggle
+let currentLayout = 0; // 0: Default, 1: Desktop, 2: Mobile
+const layoutToggleBtn = document.getElementById('layout-toggle');
+const mainContent = document.getElementById('main-content');
+const layoutModes = ['Default Layout', 'Desktop Layout', 'Mobile Layout'];
+const layoutClasses = ['', 'desktop-layout', 'mobile-layout'];
+
+function toggleLayoutMode() {
+    // Cycle through modes: 0 -> 1 -> 2 -> 0
+    currentLayout = (currentLayout + 1) % layoutModes.length; 
+
+    // Update button text
+    layoutToggleBtn.textContent = layoutModes[currentLayout];
+    
+    // Remove all layout classes
+    mainContent.classList.remove('desktop-layout', 'mobile-layout');
+    
+    // Apply the new class if it's not the default mode
+    if (currentLayout > 0) {
+        mainContent.classList.add(layoutClasses[currentLayout]);
+    }
+    
+    // Scroll to main content to show the change
+    mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+
 // Real-Time Clock Update
 function updateTimes(){
     let now = new Date();
@@ -1147,6 +1215,30 @@ function convert() {
     
     const slTime = ("0"+h).slice(-2) + ":" + ("0"+m).slice(-2);
     outputDiv.innerText = "🇱🇰 SL Time: " + slTime;
+}
+
+// --- NEW: Privacy Policy Button Handler ---
+function showPrivacyPolicy() {
+    const policyText = `
+🔒 Privacy Policy & Data Notice 🔒
+=================================
+
+What Information Do We Collect?
+Our tools are designed to be data-minimal. However, based on partner platform APIs (like Firebase), we may log technical visit data (IP, time, browser, OS) for security and analytics. For the VIP dashboard, we explicitly collect the unique ID/Name you provide to personalize your experience and track site access.
+
+Our Commitment
+We are committed to protecting your privacy. All user access information is kept strictly confidential and is used solely for service optimization and security purposes. We do not sell or share your personal identification data with third parties.
+
+Cookies Notice
+This site may use essential cookies for functionality, such as managing your dark/light mode preference and maintaining the state of the video background. By using this service, you consent to the use of these necessary session and preference cookies.
+    `;
+    alert(policyText.trim());
+}
+
+// Event Listener for the new button
+const privacyButton = document.getElementById('privacy-toggle');
+if (privacyButton) {
+    privacyButton.addEventListener('click', showPrivacyPolicy);
 }
 </script>
 </body>
