@@ -203,6 +203,41 @@ header {
     100% { box-shadow: 0 0 0 0 rgba(152, 251, 152, 0); }
 }
 
+/* --- NEW: QUICK LINK STYLES --- */
+.quick-links-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+    border-left: 1px solid rgba(170, 170, 170, 0.3);
+    padding-left: 20px;
+}
+
+.blink-link {
+    color: var(--yellow-highlight);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.5px;
+    /* Blinking Animation */
+    animation: linkGlow 2s infinite alternate;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.blink-link:hover {
+    color: var(--light-green);
+    transform: scale(1.1);
+    animation: none; /* Stop blink on hover */
+    text-shadow: 0 0 8px var(--light-green);
+}
+
+@keyframes linkGlow {
+    0% { opacity: 0.7; text-shadow: 0 0 0 transparent; }
+    100% { opacity: 1; text-shadow: 0 0 8px var(--yellow-highlight); }
+}
+/* -------------------------- */
+
 #header-time-container {
     display: flex;
     gap: 15px; 
@@ -516,6 +551,9 @@ footer {
     .logo {
         font-size: 1rem;
     }
+    .quick-links-container {
+        display: none; /* Hide quick links on mobile to save space */
+    }
     #header-time-container {
         display: none !important;
     }
@@ -713,7 +751,13 @@ footer {
         <span class="logo-text"><span class="vip">LS</span>RaceBet</span>
     </div>
     <div class="live-status">LIVE</div>
-</div>
+    
+    <div class="quick-links-container">
+        <a href="https://www.punters.com.au/" target="_blank" class="blink-link" title="Visit Punters">PUNTERS</a>
+        <a href="https://www.attheraces.com/" target="_blank" class="blink-link" title="Visit AtTheRaces">ATR</a>
+        <a href="https://schedule.skyracing.com.au/" target="_blank" class="blink-link" title="Sky Racing Schedule">SKY-SCH</a>
+    </div>
+    </div>
 
     <div class="header-right">
         
@@ -1107,5 +1151,3 @@ function convert() {
 </script>
 </body>
 </html>
-
-
