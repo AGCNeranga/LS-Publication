@@ -807,9 +807,6 @@ footer {
             👤
         </button>
         
-        <button id="privacy-toggle" class="icon-btn" aria-label="Privacy Policy & Data Notice">
-            🔒
-        </button>
         <button class="nav-btn" onclick="document.getElementById('main-content').scrollIntoView({ behavior: 'smooth' })">VIEW TRACKERS</button>
         
         <button class="nav-btn" onclick="scrollToConverter()">TIME CONVERTER</button>
@@ -912,19 +909,15 @@ footer {
     </div>
     
     <div id="image-gallery">
-        <h3>Background Image Gallery</h3> <div class="gallery-grid">
+        <h3>Gallery</h3> <div class="gallery-grid">
             <img src="https://www.virtuallakedistrict.net/wp-content/uploads/2022/10/A-Guide-To-Horse-Racing.jpg" alt="Horse Racing Image 1">
             <img src="https://horseracinggift.co.uk/cdn/shop/files/AdobeStock_49474608_77d0e1d1-a2a7-4624-809a-b158df80ca20.jpg?v=1693395886&width=1500" alt="Horse Racing Image 2">
             <img src="https://static1.squarespace.com/static/517636f8e4b0cb4f8c8697ba/t/687270061c520f20fb77da16/1739740259252/Guernsey+Race+Club+L%27Ancresse+meeting+2019?format=1500w" alt="Horse Racing Image 3">
             <img src="https://www.fakenhamracecourse.co.uk/wp-content/uploads/2024/05/LBM_6892-scaled-e1714561421123.jpg" alt="Horse Racing Image 4">
-            <img src="https://www.discoverhongkong.com/content/dam/dhk/intl/explore/culture/hong-kong-horse-racing/intro-c-1920x1080.jpg">
-            <img src="https://entertainment.hkjc.com//consvc.hkjc.com/-/media/Sites/JCEW/Entertainment/images/racecourse-sha-tin-L01.jpg?rev=d54c50c62b6a4e60bcef26cbeb5fea12&sc_lang=en-US">
-            <img src="https://agrifutures.com.au/wp-content/uploads/2022/08/a8-scaled.jpg">
-            <img src="https://tscom.imgix.net/Keeneland_Scenics_Keeneland_10_f6005e1caf.jpg?width=8400&auto=compress,format">
-            <img src="https://b3418202.smushcdn.com/3418202/wp-content/uploads/2023/07/chepstow-races-scaled.jpg?lossy=2&strip=1&webp=1">
-            <img src="https://www.liveabout.com/thmb/qA7Y62CVux9DwZyy1azp-EO-rEA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-592455695-59e131b322fa3a00109177ac.jpg">
-            <img src="https://bloximages.chicago2.vip.townnews.com/dailygazette.com/content/tncms/assets/v3/editorial/4/c1/4c14fcbf-61fb-4438-8c4f-41e8d4bc2001/6870351dd6bee.image.jpg?crop=1608%2C844%2C0%2C193&resize=1200%2C630&order=crop%2Cresize">
-            <img src="https://www.dynamicsyndications.com/site/Dynamic_Syndications/filesystem/images/2021%20YEARLINGS/Caravaggio%20Malibu%20Road/Caravaggio.jpg">
+            <img src="https://www.fakenhamracecourse.co.uk/wp-content/uploads/2024/05/LBM_6892-scaled-e1714561421123.jpg" alt="Horse Racing Image 4">
+             <img src="https://horseracinggift.co.uk/cdn/shop/files/AdobeStock_49474608_77d0e1d1-a2a7-4624-809a-b158df80ca20.jpg?v=1693395886&width=1500" alt="Horse Racing Image 2">
+              <img src="https://horseracinggift.co.uk/cdn/shop/files/AdobeStock_49474608_77d0e1d1-a2a7-4624-809a-b158df80ca20.jpg?v=1693395886&width=1500" alt="Horse Racing Image 2">
+               <img src="https://horseracinggift.co.uk/cdn/shop/files/AdobeStock_49474608_77d0e1d1-a2a7-4624-809a-b158df80ca20.jpg?v=1693395886&width=1500" alt="Horse Racing Image 2">
 
         </div>
     </div>
@@ -1224,30 +1217,6 @@ function convert() {
     
     const slTime = ("0"+h).slice(-2) + ":" + ("0"+m).slice(-2);
     outputDiv.innerText = "🇱🇰 SL Time: " + slTime;
-}
-
-// --- NEW: Privacy Policy Button Handler ---
-function showPrivacyPolicy() {
-    const policyText = `
-🔒 Privacy Policy & Data Notice 🔒
-=================================
-
-What Information Do We Collect?
-Our tools are designed to be data-minimal. However, based on partner platform APIs (like Firebase), we may log technical visit data (IP, time, browser, OS) for security and analytics. For the VIP dashboard, we explicitly collect the unique ID/Name you provide to personalize your experience and track site access.
-
-Our Commitment
-We are committed to protecting your privacy. All user access information is kept strictly confidential and is used solely for service optimization and security purposes. We do not sell or share your personal identification data with third parties.
-
-Cookies Notice
-This site may use essential cookies for functionality, such as managing your dark/light mode preference and maintaining the state of the video background. By using this service, you consent to the use of these necessary session and preference cookies.
-    `;
-    alert(policyText.trim());
-}
-
-// Event Listener for the new button
-const privacyButton = document.getElementById('privacy-toggle');
-if (privacyButton) {
-    privacyButton.addEventListener('click', showPrivacyPolicy);
 }
 </script>
 </body>
