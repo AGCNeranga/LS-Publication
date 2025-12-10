@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIP RaceBet Hub | AGC Neranga Layout</title>
+<title>LSBET|AGCN</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 /* --- COLOR PALETTE & BASE --- */
@@ -646,6 +646,42 @@ footer {
     100% { box-shadow: 0 0 0 0 rgba(152, 251, 152, 0); }
 }
 
+/* --- sri lanka --- */
+
+.smooth-sri {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Colors */
+.yellow { color: yellow; }
+.green { color: lightgreen; }
+
+/* Animation for each letter */
+.smooth-sri span {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 0.6s forwards;  /* slower */
+}
+
+/* Slow letter-by-letter delay */
+.smooth-sri span:nth-child(1) { animation-delay: 0.4s; }
+.smooth-sri span:nth-child(2) { animation-delay: 0.8s; }
+.smooth-sri span:nth-child(3) { animation-delay: 1.2s; }
+.smooth-sri span:nth-child(4) { animation-delay: 1.6s; }
+.smooth-sri span:nth-child(5) { animation-delay: 2.0s; }
+.smooth-sri span:nth-child(6) { animation-delay: 2.4s; }
+.smooth-sri span:nth-child(7) { animation-delay: 2.8s; }
+.smooth-sri span:nth-child(8) { animation-delay: 3.2s; }
+.smooth-sri span:nth-child(9) { animation-delay: 3.6s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 </style>
 </head>
 <body class="dark-mode"> 
@@ -722,19 +758,19 @@ footer {
         <h3>🇦🇺 AUS Race Tools</h3>
         <a href="https://agcneranga.github.io/AUS-Race-Premium/" class="tracker-link">Top AUS (TARR|HARR) Race Tracker</a>
         <a href="https://agcneranga.github.io/RaceKH3/" class="tracker-link">AUS New v9.00 (HARR) Marker</a>
-        <a href="https://agcneranga.github.io/.k..h.-marker2/" class="tracker-link">AUS .K./.H. (HARR) Marker</a>
     </div>
 
     <div class="content-section" style="border-top-color: var(--dark-red);">
         <h3>🇦🇺 Other Tools</h3>
-        <a href="https://agcneranga.github.io/TARR_AUS_PA/" class="tracker-link">AUS .K./.H. (TARR) Marker</a>
-        <a href="#" onclick="underMaintenance()" class="tracker-link">AUS (GREY) Tracker (Maint.)</a>
+        <a href="https://agcneranga.github.io/.k..h.-marker2/" class="tracker-link">AUS .K./.H. ( HARR ) Marker</a>
+        <a href="https://agcneranga.github.io/TARR_AUS_PA/" class="tracker-link">AUS .K./.H. (--TARR--) Marker</a>
+        <a href="#" onclick="underMaintenance()" class="tracker-link">AUS ( GREY ) Tracker (Maint.)</a>
     </div>
 
 
       <div class="content-section" style="border-top-color: var(--yellow-highlight);">
         <h3>🇫🇷 FRANCE</h3>
-        <a href="#" onclick="underMaintenance()" class="tracker-link">FRANCE Tracker 1 </a>
+        <a href="#" onclick="underMaintenance()" class="tracker-link">Top FRANCE Race Tracker</a>
         <a href="#" onclick="underMaintenance()" class="tracker-link">FRANCE Tracker 2 </a>
 
 
@@ -742,7 +778,7 @@ footer {
 
     <div class="content-section" style="border-top-color: var(--dark-green);">
         <h3>🇺🇸 USA</h3>
-        <a href="#" onclick="underMaintenance()" class="tracker-link">USA Tracker 1 </a>
+        <a href="#" onclick="underMaintenance()" class="tracker-link">Top USA Race Tracker</a>
         <a href="#" onclick="underMaintenance()" class="tracker-link">USA Tracker 2</a>
 </div>
 
@@ -756,7 +792,25 @@ footer {
         </div>
 
         <div class="converter-container">
-            <h3> Time Zone Converter (SRI LANKA)</h3>
+            <h3> Time Zone Converter</h3>
+
+
+
+        <h4 class="smooth-sri">
+  <span class="yellow">S</span>
+
+  <span class="yellow">R</span>
+  <span class="yellow">I</span>
+  <span>&nbsp;</span>
+  <span class="green">L</span>
+  <span class="green">A</span>
+  <span class="green">N</span>
+  <span class="green">K</span>
+  <span class="green">A</span>
+</h4>
+
+
+
             <div id="converter">
                 <label>Enter Time (UK / AUS):</label>
                 <input type="time" id="userTime">
