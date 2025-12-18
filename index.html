@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LSBET|AGCN</title>
+<title>LSBET|AGCN - Christmas Edition</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 /* --- COLOR PALETTE & BASE --- */
@@ -69,6 +69,33 @@
     border-left-color: var(--yellow-highlight);
 }
 
+/* --- SNOW EFFECT STYLES --- */
+.snowflake {
+  color: #fff;
+  font-size: 1.2em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px rgba(255,255,255,1);
+  position: fixed;
+  top: -10%;
+  z-index: 9998;
+  user-select: none;
+  cursor: default;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+
+@keyframes snowflakes-fall {
+  0% { top: -10%; }
+  100% { top: 100%; }
+}
+
+@keyframes snowflakes-shake {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(80px); }
+}
 
 /* --- GENERAL STYLES --- */
 span, p, h1, h2, h3 {
@@ -129,8 +156,8 @@ body::before {
     background-position: center;
     background-attachment: fixed; 
     
-    /* Overlay color opacity is 0.5 for light effect */
-    background-color: rgba(16, 24, 32, 0.5); 
+    /* MODIFIED: Increased opacity to 0.7 for lower brightness/better contrast for snow */
+    background-color: rgba(16, 24, 32, 0.7); 
     background-blend-mode: multiply; 
     
     backdrop-filter: blur(2px); 
@@ -752,6 +779,28 @@ footer {
 </head>
 <body class="dark-mode"> 
 
+<div class="snow-container">
+    <div class="snowflake" style="left:10%; animation-delay:0s;">❅</div>
+    <div class="snowflake" style="left:20%; animation-delay:1s;">❆</div>
+    <div class="snowflake" style="left:30%; animation-delay:6s;">❅</div>
+    <div class="snowflake" style="left:40%; animation-delay:4s;">❆</div>
+    <div class="snowflake" style="left:50%; animation-delay:2s;">❅</div>
+    <div class="snowflake" style="left:60%; animation-delay:8s;">❆</div>
+    <div class="snowflake" style="left:70%; animation-delay:3s;">❅</div>
+    <div class="snowflake" style="left:80%; animation-delay:5s;">❆</div>
+    <div class="snowflake" style="left:90%; animation-delay:10s;">❅</div>
+    <div class="snowflake" style="left:5%; animation-delay:7s;">❆</div>
+    <div class="snowflake" style="left:15%; animation-delay:2s;">❅</div>
+    <div class="snowflake" style="left:25%; animation-delay:4s;">❆</div>
+    <div class="snowflake" style="left:35%; animation-delay:1s;">❅</div>
+    <div class="snowflake" style="left:45%; animation-delay:9s;">❆</div>
+    <div class="snowflake" style="left:55%; animation-delay:3s;">❅</div>
+    <div class="snowflake" style="left:65%; animation-delay:5s;">❆</div>
+    <div class="snowflake" style="left:75%; animation-delay:7s;">❅</div>
+    <div class="snowflake" style="left:85%; animation-delay:11s;">❆</div>
+    <div class="snowflake" style="left:95%; animation-delay:2s;">❅</div>
+</div>
+
 <div id="name-overlay">
     <div class="login-card">
         <h2>🔑 DATA CONTROL</h2>
@@ -777,6 +826,7 @@ footer {
             <img src="" alt="" class="logo-icon" style="height:20px;">
         </a>
         <span class="logo-text"><span class="vip">LS</span>RaceBet</span>
+        <span style="font-size: 0.7rem; color: #ff4d4d; margin-left: 10px; vertical-align: middle;">🎄 Merry Christmas</span>
     </div>
     <div class="live-status">LIVE</div>
     
@@ -1223,6 +1273,3 @@ function convert() {
 </script>
 </body>
 </html>
-
-
-
