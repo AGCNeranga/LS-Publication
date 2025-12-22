@@ -788,6 +788,28 @@ footer {
     border-radius: 5px; /* Optional: rounds the corners slightly */
 }
 
+/* Container for the logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; /* Space between logo and "DATA CONTROL" */
+}
+
+/* The logo itself */
+.login-logo {
+    max-width: 150px;    /* Limits the width so it stays small */
+    height: auto;        /* Keeps the proportions correct */
+    display: block;
+    margin: 0 auto;      /* Horizontal centering */
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1)); /* Optional: adds a soft shadow */
+}
+
+/* Styling adjustment for the Header to match */
+.login-card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
 </style>
 </head>
 <body class="dark-mode"> 
@@ -816,7 +838,11 @@ footer {
 
 <div id="name-overlay">
     <div class="login-card">
-        <h2>🔑 DATA CONTROL</h2>
+        <div class="logo-container">
+            <img src="https://leisuresportsholdings.com/images/logo.png" alt="Company Logo" class="login-logo">
+        </div>
+
+        <h2>DATA CONTROL</h2>
         <p class="login-sub">Enter Your Credentials to Proceed</p>
         <input id="visitor-name" type="text" placeholder="Unique ID / Name" autocomplete="off" />
         <button id="submit-name">Verify & Enter</button>
