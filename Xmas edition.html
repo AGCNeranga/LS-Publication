@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LSBET|AGCN - Christmas Edition</title>
+<title>LSPublication|AGCN - Christmas Edition</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
-/* --- COLOR PALETTE & BASE --- */
+/* --- COLOR AGCN PALETTE & BASE --- */
 * { 
     margin:0; 
     padding:0; 
@@ -14,7 +14,7 @@
     font-family: 'Poppins', sans-serif; 
 }
 :root {
-    /* DARK MODE (Default) */
+    /* DARK MODE (AGCN) */
     --light-green: #98fb98; 
     --yellow-highlight: #ffd700; 
     --dark-green: #006400; 
@@ -230,7 +230,7 @@ header {
     100% { box-shadow: 0 0 0 0 rgba(152, 251, 152, 0); }
 }
 
-/* --- NEW: QUICK LINK STYLES --- */
+/* --- NEW: AGCN QUICK LINK STYLES --- */
 .quick-links-container {
     display: flex;
     align-items: center;
@@ -362,7 +362,7 @@ header {
     transition: background 0.5s;
 }
 
-/* NEW: Layout Toggle Classes */
+/* NEW: AGCN Layout Toggle Classes */
 #main-content.desktop-layout {
     grid-template-columns: repeat(3, minmax(300px, 1fr)) !important; 
 }
@@ -541,10 +541,10 @@ header {
 }
 .gallery-grid img:hover {
     opacity: 1;
-    transform: none; /* Ensure hover does not interfere */
+    transform: none; /* Ensure hover interfere */
 }
 
-/* NEW Keyframes for a slow, alternating slide */
+/* NEW Keyframes for a slow alternating slide */
 @keyframes slide-show {
     /* Moves the track 40% of its total length to the left, then back (alternate) */
     0% { transform: translateX(0); }
@@ -552,7 +552,7 @@ header {
 }
 
 
-/* --- FOOTER --- */
+/* --- AGCN FOOTER --- */
 footer {
     width: 100%;
     text-align: center;
@@ -618,9 +618,7 @@ footer {
     }
 }
 
-/* ========================================= */
-/* --- NEW 3D / ANIMATED OVERLAY STYLES --- */
-/* ========================================= */
+/* --- NEW AGCN 3D ANIMATED OVERLAY STYLES --- */
 #name-overlay {
     position: fixed; 
     top: 0; 
@@ -628,7 +626,7 @@ footer {
     width: 100%; 
     height: 100%;
     
-    /* Dedicated Dark Horse Racing Background for Overlay */
+    /* Dedicated Dark Horse Racing AGCN Background for Overlay */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
                 url('https://images.unsplash.com/photo-1548685913-fe6678babe8d?q=80&w=2000&auto=format&fit=crop');
     background-size: cover;
@@ -641,7 +639,7 @@ footer {
     transition: opacity 0.8s ease-in-out;
 }
 
-/* Glassmorphism Card 3D Effect */
+/* Glassmorphism Card 3D AGCN Effect */
 .login-card {
     background: rgba(255, 255, 255, 0.05); /* Very subtle white tint */
     backdrop-filter: blur(15px);
@@ -775,6 +773,21 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+.blink-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.blink-link img {
+    width: 80px;      /* Adjust size here (16px to 20px is standard) */
+    height: 30px;
+    margin-right: 2px; /* Space between logo and text */
+    border-radius: 5px; /* Optional: rounds the corners slightly */
+}
+
 </style>
 </head>
 <body class="dark-mode"> 
@@ -825,15 +838,21 @@ footer {
         <a href="zz1.html">
             <img src="" alt="" class="logo-icon" style="height:20px;">
         </a>
-        <span class="logo-text"><span class="vip">LS</span>Bet</span>
+        <span class="logo-text"><span class="vip">LS</span>Publication</span>
         <span style="font-size: 0.7rem; color: #ff4d4d; margin-left: 10px; vertical-align: middle;">🎄 Merry Christmas</span>
     </div>
     <div class="live-status">LIVE</div>
     
     <div class="quick-links-container">
-        <a href="https://www.punters.com.au/" target="_blank" class="blink-link" title="Visit Punters">PUNTERS</a>
-        <a href="https://www.attheraces.com/" target="_blank" class="blink-link" title="Visit AtTheRaces">ATR</a>
-        <a href="https://schedule.skyracing.com.au/" target="_blank" class="blink-link" title="Sky Racing Schedule">SKY-SCH</a>
+    <a href="https://www.punters.com.au/" target="_blank" class="blink-link" title="Visit Punters">
+        <img src="https://puntcdn.com/icons/punterslogodesktop.svg" alt="Punters Logo">
+    </a>
+    <a href="https://www.attheraces.com/" target="_blank" class="blink-link" title="Visit AtTheRaces">
+        <img src="https://www.attheraces.com/resources/img/branding/logo.png" alt="ATR Logo">
+    </a>
+    <a href="https://schedule.skyracing.com.au/" target="_blank" class="blink-link" title="Sky Racing Schedule">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/93/Sky_au_racing.png" alt="Sky Logo">
+    </a>
     </div>
     </div>
 
@@ -861,7 +880,7 @@ footer {
         
         <button class="nav-btn" onclick="document.getElementById('converter').scrollIntoView({ behavior: 'smooth' })">TIME CONVERTER</button>
  
-        <button id="layout-toggle" class="nav-btn" onclick="toggleLayoutMode()">Default Layout</button>
+        <button id="layout-toggle" class="nav-btn" onclick="toggleLayoutMode()">Default</button>
         </div>
 </header>
 
@@ -875,13 +894,13 @@ footer {
 <section id="main-content">
     
     <div class="content-section" style="border-top-color: var(--light-green);">
-        <h3>🇬🇧 UK Race Tools</h3>
+        <h3>🇬🇧 UNITED KINGDOM</h3>
         <a href="https://agcneranga.github.io/UKTE/" target="_blank" class="tracker-link">Top UK Race Tracker</a>
         <a href="https://agcneranga.github.io/TCE/" target="_blank" class="tracker-link">UK RaceTips Editor</a>
     </div>
 
     <div class="content-section" style="border-top-color: var(--yellow-highlight);">
-        <h3>🇦🇺 AUS Race Tools</h3>
+        <h3>🇦🇺 AUSTRALIA</h3>
         <a href="https://agcneranga.github.io/AUS-Race-Premium/" target="_blank" class="tracker-link">Top AUS (TARR|HARR) Race Tracker</a>
         <a href="https://agcneranga.github.io/RaceKH3/" target="_blank" class="tracker-link">AUS New v9.00 (HARR) Marker</a>
         <a href="https://agcneranga.github.io/AUS-Horsecodes-Finder/" target="_blank" class="tracker-link">AUS Code Abbrevation Marker</a>
@@ -889,7 +908,7 @@ footer {
     </div>
 
     <div class="content-section" style="border-top-color: var(--dark-red);">
-        <h3>🇦🇺 Other Tools</h3>
+        <h3>🇦🇺 AUSTRALIA EXTRA</h3>
         <a href="https://agcneranga.github.io/.k..h.-marker2/" target="_blank" class="tracker-link">AUS .K./.H. ( HARR ) Marker</a>
         <a href="https://agcneranga.github.io/TARR_AUS_PA/" target="_blank" class="tracker-link">AUS .K./.H. (--TARR--) Marker</a>
         <a href="#" onclick="underMaintenance()" class="tracker-link">AUS ( GREY ) Tracker (Maint.)</a>
@@ -963,14 +982,29 @@ footer {
     
     <div id="image-gallery">
         <h3> </h3> <div class="gallery-grid">
-            <img src="https://www.virtuallakedistrict.net/wp-content/uploads/2022/10/A-Guide-To-Horse-Racing.jpg" alt="Horse Racing Image 1">
-            <img src="https://horseracinggift.co.uk/cdn/shop/files/AdobeStock_49474608_77d0e1d1-a2a7-4624-809a-b158df80ca20.jpg?v=1693395886&width=1500" alt="Horse Racing Image 2">
-            <img src="https://static1.squarespace.com/static/517636f8e4b0cb4f8c8697ba/t/687270061c520f20fb77da16/1739740259252/Guernsey+Race+Club+L%27Ancresse+meeting+2019?format=1500w" alt="Horse Racing Image 3">
-            <img src="https://www.fakenhamracecourse.co.uk/wp-content/uploads/2024/05/LBM_6892-scaled-e1714561421123.jpg" alt="Horse Racing Image 4">
-            <img src="https://www.fakenhamracecourse.co.uk/wp-content/uploads/2024/05/LBM_6892-scaled-e1714561421123.jpg" alt="Horse Racing Image 4">
-             <img src="https://horseracinggift.co.uk/cdn/shop/files/AdobeStock_49474608_77d0e1d1-a2a7-4624-809a-b158df80ca20.jpg?v=1693395886&width=1500" alt="Horse Racing Image 2">
-              <img src="https://horseracinggift.co.uk/cdn/shop/files/AdobeStock_49474608_77d0e1d1-a2a7-4624-809a-b158df80ca20.jpg?v=1693395886&width=1500" alt="Horse Racing Image 2">
-               <img src="https://horseracinggift.co.uk/cdn/shop/files/AdobeStock_49474608_77d0e1d1-a2a7-4624-809a-b158df80ca20.jpg?v=1693395886&width=1500" alt="Horse Racing Image 2">
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQFBv2hQ_HKFHg/feedshare-shrink_2048_1536/B56Zqz4YLsJQAw-/0/1763954493561?e=1767830400&v=beta&t=TrmDKQ1vRiCzjndp-mG3HCUX1HKhdw9miFliqRpA4eA" alt="Horse Racing Image 1">
+
+
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQG50dEUMd27Mg/feedshare-shrink_1280/B56Zqz4YLVHQAs-/0/1763954493220?e=1767830400&v=beta&t=skkVmvg7qWcMmiWNsco6jdu2sgUR16Ffly5bWUlke04" alt="Horse Racing Image 2">
+
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQHKweS_1Xehiw/feedshare-shrink_2048_1536/B56Zqz4YLrHAAw-/0/1763954493453?e=1767830400&v=beta&t=EBEID12D56KzXcK8ACoZLAMqBaZNqn_IGwvkK49mSxg" alt="Horse Racing Image 3">
+
+
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQFYS7oVghuAQA/feedshare-shrink_2048_1536/B56Zqz4YLpHAA0-/0/1763954493452?e=1767830400&v=beta&t=lN5Y_052ahTyVHRoSnPB9h4uYldu1Mfnj-IagxLYxNg" alt="Horse Racing Image 4">
+
+
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQHJ8cbUxJrIZQ/feedshare-shrink_1280/B56Zqz4YMNJ8Aw-/0/1763954493560?e=1767830400&v=beta&t=7iHSB3mC8f_IgnE9C79wsNu87eJvLPF0mgTBOvhibjc" alt="Horse Racing Image 5">
+
+
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQGV6XjhVjCQ5A/feedshare-shrink_2048_1536/B56Zqz4YLmJoAw-/0/1763954493403?e=1767830400&v=beta&t=WGZ8XJp9BjWUqnMhPrZnNWdRzgWLUF-ynZgGphiFurY" alt="Horse Racing Image 6">
+
+
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQFBv2hQ_HKFHg/feedshare-shrink_2048_1536/B56Zqz4YLsJQAw-/0/1763954493561?e=1767830400&v=beta&t=TrmDKQ1vRiCzjndp-mG3HCUX1HKhdw9miFliqRpA4eA" alt="Horse Racing Image 8">
+
+
+            <img src="https://scontent.fcmb11-3.fna.fbcdn.net/v/t1.6435-9/154657054_862324267883967_6331682614425626539_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7FvPKN1TZggQ7kNvwF1Psff&_nc_oc=AdnVY-cLfX0IQ_eFs7RRKGEzlkwxTrDJA4EkoVxX-qblegkgQn5VPMSC4f0eR7bk4_2m8NwGrHC5ArndqjqkI7Vq&_nc_zt=23&_nc_ht=scontent.fcmb11-3.fna&_nc_gid=zMJU-2bjwx8k0KWJtQGZwQ&oh=00_AfnKCdJ0pAa3mUXQ953ejB2Ys9xp4wUWw4buGflWhLQXLA&oe=6970DC73" alt="Horse Racing Image 9">
+
+              
 
         </div>
     </div>
@@ -978,7 +1012,7 @@ footer {
 </section>
 
 <footer>
-    &copy; 2025 Charith Neranga | VIP Dashboard LS BET
+    &copy; 2025 | LS Publication Dept.
 </footer>
 
 <div class="scroll-buttons">
@@ -1169,7 +1203,7 @@ function openInNewTab(selector) {
 let currentLayout = 0; // 0: Default, 1: Desktop, 2: Mobile
 const layoutToggleBtn = document.getElementById('layout-toggle');
 const mainContent = document.getElementById('main-content');
-const layoutModes = ['Default Layout', 'Desktop Layout', 'Mobile Layout'];
+const layoutModes = ['Default', 'Desktop', 'Mobile'];
 const layoutClasses = ['', 'desktop-layout', 'mobile-layout'];
 
 function toggleLayoutMode() {
@@ -1279,5 +1313,6 @@ function convert() {
 </script>
 </body>
 </html>
+
 
 
