@@ -1354,18 +1354,32 @@ function convert() {
 /* --- AUTOMATIC MONTHLY THEME LOGIC --- */
 function applyMonthlyUpdates() {
     const editions = [
-        { name: "New Year Edition", greet: "🎉 Happy New Year" },
-        { name: "Late Winter Edition", greet: "❄️ Stay Warm" },
-        { name: "Spring Edition", greet: "🌱 Fresh Season" },
-        { name: "Spring Bloom Edition", greet: "🌸 Happy Spring" },
-        { name: "May Edition", greet: "🏇 Race Season" },
-        { name: "Summer Edition", greet: "☀️ Summer Racing" },
-        { name: "Mid-Summer Edition", greet: "🔥 Heat on Track" },
-        { name: "Summer End Edition", greet: "🌊 Golden Days" },
-        { name: "Autumn Edition", greet: "🍂 Fall Insights" },
-        { name: "Halloween Edition", greet: "🎃 Spooky Wins" },
-        { name: "Winter Edition", greet: "🌩️ Cold Strikes" },
-        { name: "Christmas Edition", greet: "🎄 Merry Christmas" }
+      //  { name: "New Year Edition", greet: "🎉 Happy New Year" },
+    // { name: "Late Winter Edition", greet: "❄️ Stay Warm" },
+      //    { name: "Spring Edition", greet: "🌱 Fresh Season" },
+      //    { name: "Spring Bloom Edition", greet: "🌸 Happy Spring" },
+       //   { name: "May Edition", greet: "🏇 Race Season" },
+       //   { name: "Summer Edition", greet: "☀️ Summer Racing" },
+       //   { name: "Mid-Summer Edition", greet: "🔥 Heat on Track" },
+       //   { name: "Summer End Edition", greet: "🌊 Golden Days" },
+       //   { name: "Autumn Edition", greet: "🍂 Fall Insights" },
+        //  { name: "Halloween Edition", greet: "🎃 Spooky Wins" },
+        //  { name: "Winter Edition", greet: "🌩️ Cold Strikes" },
+        //  { name: "Christmas Edition", greet: "🎄 Merry Christmas" }
+
+
+        { name: "New Year / Magic Millions", greet: "🎉 Happy New Year | 🏇 Carnival Season" }, // Jan
+        { name: "Late Winter / Blue Diamond", greet: "❄️ Stay Warm | 💎 Diamond Day" },          // Feb
+        { name: "Spring / Cheltenham Festival", greet: "🌱 Fresh Season | 🏆 Festival Glory" }, // Mar
+        { name: "Spring Bloom / Grand National", greet: "🌸 Happy Spring | 🏇 National Spirit" }, // Apr
+        { name: "May Edition / Classic Trials", greet: "🏇 Race Season | 🌹 Classic Trials" },   // May
+        { name: "Summer / Royal Ascot", greet: "☀️ Summer Racing | 🎩 Royal Pageantry" },       // Jun
+        { name: "Mid-Summer / July Festival", greet: "🔥 Heat on Track | ☀️ Summer Sprint" },    // Jul
+        { name: "Summer End / Ebor Prestige", greet: "🌊 Golden Days | 🏹 Ebor Prestige" },     // Aug
+        { name: "Autumn / Classic Stakes", greet: "🍂 Fall Insights | 📜 Classic Stakes" },     // Sep
+        { name: "Halloween / Reach the Peak", greet: "🎃 Spooky Wins | 🏔️ Reach the Peak" },    // Oct
+        { name: "Winter / Melbourne Cup", greet: "🌩️ Cold Strikes | 🇦🇺 Race That Stops a Nation" }, // Nov
+        { name: "Christmas / King George VI", greet: "🎄 Merry Christmas | 🏇 Boxing Day Classics" } // Dec
     ];
 
     const now = new Date();
