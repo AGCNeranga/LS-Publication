@@ -29,6 +29,30 @@
     margin-right: 15px;
     display: none; /* Hidden until login */
 }
+
+/* LOADING SCREEN STYLES */
+#loading-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--deep-blue-black);
+    z-index: 10001;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    border: 8px solid rgba(152, 251, 152, 0.1);
+    border-top: 8px solid var(--light-green);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 </style>
 </head>
 <body class="dark-mode"> 
@@ -43,6 +67,11 @@
         if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // View Source
     };
 </script>
+
+<div id="loading-screen">
+    <div class="loader"></div>
+    <p style="color:var(--light-green); font-family:'Orbitron', sans-serif; margin-top:20px; letter-spacing:2px;">STREAMLINING DATA...</p>
+</div>
 
 <div class="snow-container" id="snow-overlay" style="display:none;">
     <div class="snowflake" style="left:10%; animation-delay:0s;">❅</div>
@@ -319,7 +348,6 @@
         "chanaka": "chanaka1234",
         "sanjeewa": "sanjeewa1234",
         "mangala": "mangala1234"
-
     };
 
     const overlay = document.getElementById('name-overlay');
@@ -327,20 +355,39 @@
     const inputPass = document.getElementById('visitor-pass');
     const submitBtn = document.getElementById('submit-name');
     const userDisplay = document.getElementById('user-display');
+    const loader = document.getElementById('loading-screen');
 
     submitBtn.addEventListener('click', () => {
         const name = inputName.value.trim().toLowerCase();
         const pass = inputPass.value.trim();
         
         if (users[name] && users[name] === pass) {
+            // 1. Hide Login Card
             overlay.style.opacity = '0';
-            setTimeout(() => { overlay.style.display = 'none'; }, 800);
             
-            // Show user in the header
-            userDisplay.innerText = "👤 " + name.toUpperCase();
-            userDisplay.style.display = "inline-block";
+            setTimeout(() => { 
+                overlay.style.display = 'none'; 
+                
+                // 2. Show Loading Screen
+                loader.style.display = 'flex';
+                
+                // 3. Simulate Loading (2.5 seconds)
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    loader.style.transition = 'opacity 0.5s ease';
+                    
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                        
+                        // 4. Reveal Content & Setup User Badge
+                        userDisplay.innerText = "👤 " + name.toUpperCase();
+                        userDisplay.style.display = "inline-block";
+                        logVisitor(name);
+                    }, 500);
+                }, 2500);
+
+            }, 800);
             
-            logVisitor(name);
         } else {
             alert("Invalid Username or Password!");
         }
@@ -355,16 +402,3 @@ const modalContent={about:{title:"ABOUT LS PUBLICATION",body:`<p>LS Publication 
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
