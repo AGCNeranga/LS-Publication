@@ -53,6 +53,69 @@
     animation: spin 1s linear infinite;
 }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* NEW UPCOMING EVENTS STYLES */
+.upcoming-container {
+    padding: 30px 5%;
+    background: rgba(16,24,32,0.4);
+    border-bottom: 1px solid var(--dark-green);
+}
+.upcoming-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--yellow-highlight);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.news-card {
+    background: var(--medium-dark);
+    border: 1px solid var(--dark-green);s
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+}
+.news-card:hover {
+    border-color: var(--light-green);
+    box-shadow: 0 0 15px rgba(152, 251, 152, 0.2);
+    transform: translateY(-5px);
+}
+.news-img {
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--yellow-highlight);
+}
+.news-content {
+    padding: 15px;
+}
+.news-tag {
+    background: var(--dark-green);
+    color: var(--light-green);
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.news-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.news-card p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    line-height: 1.4;
+}
 </style>
 </head>
 <body class="dark-mode"> 
@@ -183,6 +246,36 @@
 <p>Designed by the Leisure Sports Publication Racing Department team, this portal transforms hours of manual entry into seconds of automated precision. By converting thousands of lines of complex racing data instantly, we empower our employees to work with accuracy and ease, eliminating the pressure of time-sensitive updates. This is our commitment to a smarter, stress-free workplace where technology handles the heavy lifting, so you can focus on excellence.</p>
 
     <button class="main-cta" onclick="openSite('https://agcneranga.github.io/Tips/')">Access UK RaceTips Editor Now</button>
+</section>
+
+<section class="upcoming-container">
+    <h3 class="upcoming-title">UPCOMING RACING EVENTS</h3>
+    <div class="news-grid">
+        <article class="news-card">
+            <img src="c1.png" class="news-img" alt="Cheltenham">
+            <div class="news-content">
+                <span class="news-tag">March 10th – 13th, 2026</span>
+                <h4>Cheltenham Festival</h4>
+                <p>Experience the magic of the Cotswolds at the ultimate four-day celebration of jump racing. Featuring 28 top-tier races, including the legendary Gold Cup, this is where legends are made and the "Cheltenham Roar" shakes the stadium.</p>
+            </div>
+        </article>
+        <article class="news-card">
+            <img src="c2.png" class="news-img" alt="Australia Racing">
+            <div class="news-content">
+                <span class="news-tag">April 4th – 11th, 2026</span>
+                <h4>The Championships (AUS)</h4>
+                <p>The Championships is the "Grand Finals" of Australian horse racing, held over two massive Saturdays in April at the historic Royal Randwick in Sydney. It is the jewel of the Sydney Autumn Racing Carnival, boasting over $25 million in prize money.</p>
+            </div>
+        </article>
+        <article class="news-card">
+            <img src="g1.png" class="news-img" alt="Grand National">
+            <div class="news-content">
+                <span class="news-tag">April 9th – 10th - 11th, 2026</span>
+                <h4>Grand National Aintree</h4>
+                <p>The Randox Grand National is arguably the most famous horse race on the planet. Held annually at Aintree Racecourse near Liverpool, it is a demanding four-mile, two-and-a-half-furlong steeplechase featuring 30 of the most challenging fences in racing, including Becher's Brook and The Chair.</p>
+            </div>
+        </article>
+    </div>
 </section>
 
 <section id="main-content">
@@ -423,5 +516,3 @@ function openSite(t){window.open(t,"_blank")}function underMaintenance(){alert("
 </script>
 </body>
 </html>
-
-
