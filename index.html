@@ -75,7 +75,7 @@
 }
 .news-card {
     background: var(--medium-dark);
-    border: 1px solid var(--dark-green);s
+    border: 1px solid var(--dark-green);
     border-radius: 10px;
     overflow: hidden;
     transition: 0.3s;
@@ -115,6 +115,79 @@
     font-size: 0.85rem;
     color: var(--text-gray);
     line-height: 1.4;
+}
+
+/* --- PDF TABLE VVIP STYLES --- */
+.vvip-table-section {
+    padding: 50px 5%;
+    background: linear-gradient(to bottom, rgba(16,24,32,0.9), rgba(30,39,51,0.8));
+    border-top: 2px solid var(--yellow-highlight);
+}
+.vvip-table-container {
+    overflow-x: auto;
+    border-radius: 15px;
+    border: 1px solid rgba(152,251,152,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.vvip-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(16,24,32,0.6);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+.vvip-table th {
+    background: var(--dark-green);
+    color: var(--yellow-highlight);
+    font-family: 'Orbitron', sans-serif;
+    text-align: left;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--yellow-highlight);
+}
+.vvip-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(170,170,170,0.1);
+    transition: 0.3s;
+}
+.vvip-table tr:hover td {
+    background: rgba(152,251,152,0.05);
+    color: var(--yellow-highlight);
+}
+.event-link {
+    color: var(--light-green);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--light-green);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    transition: 0.3s;
+}
+.event-link:hover {
+    background: var(--light-green);
+    color: var(--deep-blue-black);
+}
+.next-event-row {
+    background: rgba(255, 215, 0, 0.1) !important;
+    border-left: 5px solid var(--yellow-highlight);
+    box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.1);
+}
+.next-badge {
+    background: var(--yellow-highlight);
+    color: #000;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    margin-right: 10px;
+    animation: pulseGlow 1.5s infinite;
+}
+@keyframes pulseGlow {
+    0% {box-shadow: 0 0 0px var(--yellow-highlight);}
+    50% {box-shadow: 0 0 10px var(--yellow-highlight);}
+    100% {box-shadow: 0 0 0px var(--yellow-highlight);}
 }
 </style>
 </head>
@@ -212,6 +285,7 @@
      <a href="https://www.timeanddate.com/time/change/uk" target="_blank" class="blink-link" title="The Time and Date">
         <img src="https://c.tadst.com/gfx/og/tadlogo-facebook.png" alt="Time and Date Logo">
     </a>
+    
     </div>
     </div>
 
@@ -279,14 +353,46 @@ The main event, the Randox Grand National, is a thrilling 4-mile marathon featur
             <div class="news-content">
                 <span class="news-tag">April 15th – 19th, 2026</span>
                 <h4>Winter Dressage Championships</h4>
-                <p>Gemini said
-Winter Dressage Championships
-Experience the pinnacle of equine artistry at the Winter Dressage Championships at Addington Equestrian. This prestigious event brings together the nation's finest horse-and-rider partnerships to compete in a dazzling display of precision, harmony, and power. Featuring top-tier freestyle routines to music and intense championship showdowns, it is the ultimate showcase of talent in a luxurious, VVIP atmosphere.</p>
+                <p>Experience the pinnacle of equine artistry at the Winter Dressage Championships at Addington Equestrian. This prestigious event brings together the nation's finest horse-and-rider partnerships to compete in a dazzling display of precision, harmony, and power. Featuring top-tier freestyle routines to music and intense championship showdowns, it is the ultimate showcase of talent in a luxurious, VVIP atmosphere.</p>
             </div>
         </article>
     </div>
 </section>
 
+<section class="vvip-table-section">
+    <h3 class="upcoming-title" style="margin-bottom: 5px;">2026 EQUESTRIAN MAJORS</h3>
+    <p style="text-align: center; color: var(--text-gray); margin-bottom: 25px; font-size: 0.8rem;">[Source: UK Equestrian Calendar 2026]</p>
+    
+    <div class="vvip-table-container">
+        <table class="vvip-table" id="equestrianTable">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Sport</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-date="2026-03-10"><td>Cheltenham Festival</td><td>10-13 March</td><td>Jumps Racing</td><td>Cheltenham, Glos</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
+                <tr data-date="2026-04-09"><td>Grand National Meeting</td><td>9-11 April</td><td>Jumps Racing</td><td>Aintree, Liverpool</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
+                <tr data-date="2026-04-15"><td>Winter Dressage Championships</td><td>15-19 April</td><td>Dressage</td><td>Addington, Bucks</td><td><a href="#" class="event-link">More Info</a></td></tr>
+                <tr data-date="2026-05-01"><td>1,000 and 2,000 Guineas</td><td>1-3 May</td><td>Flat Racing</td><td>Newmarket</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
+                <tr data-date="2026-05-06"><td>Badminton Horse Trials</td><td>6-10 May</td><td>Eventing</td><td>Gloucestershire</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
+                <tr data-date="2026-05-14"><td>Royal Windsor Horse Show</td><td>14-17 May</td><td>Show Jumping</td><td>Windsor, Berkshire</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
+                <tr data-date="2026-06-05"><td>The Derby Meeting</td><td>5-6 June</td><td>Flat Racing</td><td>Epsom, Surrey</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
+                <tr data-date="2026-06-16"><td>Royal Ascot</td><td>16-20 June</td><td>Flat Racing</td><td>Ascot, Berkshire</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
+                <tr data-date="2026-07-21"><td>Royal International Horse Show</td><td>21-26 July</td><td>Showing</td><td>Hickstead, W. Sussex</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
+                <tr data-date="2026-08-07"><td>GCT London</td><td>7-9 August</td><td>Show Jumping</td><td>Chelsea, London</td><td><a href="#" class="event-link">More Info</a></td></tr>
+                <tr data-date="2026-09-03"><td>Burghley Horse Trials</td><td>3-6 September</td><td>Eventing</td><td>Stamford, Lincs</td><td><a href="#" class="event-link">More Info</a></td></tr>
+                <tr data-date="2026-10-07"><td>HOYS</td><td>7-11 October</td><td>Showjumping</td><td>Birmingham NEC</td><td><a href="#" class="event-link">More Info</a></td></tr>
+                <tr data-date="2026-12-17"><td>London International Horse Show</td><td>17-21 December</td><td>Multi-Discipline</td><td>ExCel, London</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
+                <tr data-date="2026-12-26"><td>King George VI Chase</td><td>26 Dec</td><td>Jumps Racing</td><td>Kempton, Surrey</td><td><a href="#" class="event-link">More Info</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 <section id="main-content">
     
     <div class="content-section" style="border-top-color: var(--light-green);">
@@ -490,6 +596,7 @@ Experience the pinnacle of equine artistry at the Winter Dressage Championships 
                         userDisplay.innerText = "👤 " + name.toUpperCase();
                         userDisplay.style.display = "inline-block";
                         logVisitor(name);
+                        highlightNextEvent(); // Call highlighter after login
                     }, 500);
                 }, 2500);
 
@@ -522,6 +629,30 @@ muteBtn.addEventListener('click', () => {
 });
 
 function openSite(t){window.open(t,"_blank")}function underMaintenance(){alert("🚧 This tracker is currently under maintenance. Please check back later!")}const themeToggle=document.getElementById("theme-toggle"),body=document.body;themeToggle.addEventListener("click",(()=>{body.classList.toggle("light-mode");const t=body.classList.contains("light-mode");themeToggle.innerHTML=t?"☀️":"🌙",themeToggle.setAttribute("aria-label",t?"Switch to Dark Mode":"Switch to Light Mode"),t?video.pause():video.play()}));function scrollToTop(){window.scrollTo({top:0,behavior:"smooth"})}function scrollToBottom(){window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})}function openInNewTab(t){const e=window.location.href.split("#")[0];window.open(e+t,"_blank")}let currentLayout=0;const layoutToggleBtn=document.getElementById("layout-toggle"),mainContent=document.getElementById("main-content"),layoutModes=["Default","Desktop","Mobile"],layoutClasses=["","desktop-layout","mobile-layout"];function toggleLayoutMode(){currentLayout=(currentLayout+1)%layoutModes.length,layoutToggleBtn.textContent=layoutModes[currentLayout],mainContent.classList.remove("desktop-layout","mobile-layout"),currentLayout>0&&mainContent.classList.add(layoutClasses[currentLayout]),mainContent.scrollIntoView({behavior:"smooth",block:"start"})}function updateTimes(){let t=new Date,e=t.toLocaleString("en-GB",{timeZone:"Europe/London",hour12:!0});document.getElementById("uk-time").innerText="🇬🇧 UK : "+e;let n=t.toLocaleString("en-GB",{timeZone:"Asia/Colombo",hour12:!0});document.getElementById("sl-time").innerText="🇱🇰 SL : "+n;let o=t.toLocaleString("en-GB",{timeZone:"Australia/Sydney",hour12:!0});document.getElementById("aus-time").innerText="🇦🇺 AUS : "+o;const a=t.toLocaleString("en-GB",{timeZone:"Asia/Colombo",hour:"2-digit",minute:"2-digit"}),l=t.toLocaleString("en-GB",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"}),s=t.toLocaleString("en-GB",{timeZone:"Australia/Sydney",hour:"2-digit",minute:"2-digit"}),r=document.getElementById("time-display-sl");r&&(r.innerText=a);const d=document.getElementById("time-display-uk");d&&(d.innerText=l);const i=document.getElementById("time-display-aus");i&&(i.innerText=s)}setInterval(updateTimes,1e3),updateTimes();function updateOffsetOptions(){const t=document.getElementById("country").value,e=document.getElementById("offset");e.innerHTML="";let n=[];"AUS"===t?n=["+06:30 (AEST/Daylight)","+07:30 (ACST/Standard)"]:"UK"===t&&(n=["+04:30 (GMT)","+05:30 (BST)"]);const o=document.createElement("option");o.value="",o.text="Select Offset...",e.appendChild(o),n.forEach((t=>{const n=document.createElement("option");n.value=t.split(" ")[0],n.text=t,e.appendChild(n)}))}updateOffsetOptions();function convert(){const t=document.getElementById("userTime").value,e=document.getElementById("offset").value,n=document.getElementById("output");if(!t||!e)return void(n.innerText="Error: Enter Time & Select Offset!");let[o,a]=t.split(":").map(Number);const l="+"===e[0]?1:-1;let[s,r]=e.slice(1).split(":").map(Number);let d=o*60+a+l*(60*s+r);d=(d%1440+1440)%1440;let i=Math.floor(d/60),u=d%60,c=("0"+i).slice(-2)+":"+("0"+u).slice(-2);n.innerText="🇱🇰 SL Time: "+c;const m=window.open("","_blank","width=300,height=200");m.document.write("<h1 style='font-family:sans-serif; text-align:center;'>SL Time: "+c+"</h1>")}function applyMonthlyUpdates(){const t=[{name:"Magic Millions",greet:"🎉 Happy New Year | 🏇 Carnival Season"},{name:"Blue Diamond",greet:"❄️ Stay Warm | 💎 Diamond Day"},{name:"Cheltenham Festival",greet:"🌱 Fresh Season | 🏆 Festival Glory"},{name:"Grand National",greet:"🌸 Happy Spring | 🏇 National Spirit"},{name:"Classic Trials",greet:"🏇 Race Season | 🌹 Classic Trials"},{name:"Royal Ascot",greet:"☀️ Summer Racing | 🎩 Royal Pageantry"},{name:"July Festival",greet:"🔥 Heat on Track | ☀️ Summer Sprint"},{name:"Ebor Prestige",greet:"🌊 Golden Days | 🏹 Ebor Prestige"},{name:"Classic Stakes",greet:"🍂 Fall Insights | 📜 Classic Stakes"},{name:"Reach the Peak",greet:"🎃 Spooky Wins | 🏔️ Reach the Peak"},{name:"Melbourne Cup",greet:"🌩️ Cold Strikes | 🇦🇺 Race That Stops a Nation"},{name:"Christmas / King George VI",greet:"🎄 Merry Christmas | 🏇 Boxing Day Classics"}],e=new Date,n=e.getMonth(),o=t[n],a=document.getElementById("monthly-greeting"),l=document.getElementById("snow-overlay");document.title="LSPublication|AGCN - "+o.name,a.innerText=o.greet,11===n?(l.style.display="block",a.style.color="#ff4d4d"):(l.style.display="none",a.style.color="var(--light-green)")}applyMonthlyUpdates();
+
+/* NEW AUTO HIGHLIGHT LOGIC FOR TABLE */
+function highlightNextEvent() {
+    const rows = document.querySelectorAll('#equestrianTable tbody tr');
+    const today = new Date();
+    let closestEventRow = null;
+    let minDiff = Infinity;
+
+    rows.forEach(row => {
+        const eventDate = new Date(row.getAttribute('data-date'));
+        const diff = eventDate - today;
+
+        if (diff > 0 && diff < minDiff) {
+            minDiff = diff;
+            closestEventRow = row;
+        }
+    });
+
+    if (closestEventRow) {
+        closestEventRow.classList.add('next-event-row');
+        const eventCell = closestEventRow.cells[0];
+        eventCell.innerHTML = `<span class="next-badge">NEXT UP</span>` + eventCell.innerHTML;
+    }
+}
 </script>
 </body>
 </html>
