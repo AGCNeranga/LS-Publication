@@ -87,10 +87,31 @@
     transform: translateY(-5px);
 }
 .news-img {
-    width: 100%;
-    height: 570px;
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 280px;
     object-fit: cover;
-    border-bottom: 2px solid var(--yellow-highlight);
+    
+    /* 1. Create the Frame Space */
+    padding: 5px; /* This determines the thickness of the frame */
+    border-radius: 8px; /* Optional: rounds the corners of the frame */
+    
+    /* 2. The Animated Gradient */
+    background: linear-gradient(45deg, #2ecc71, #f1c40f, #27ae60, #f39c12);
+    background-size: 400% 400%;
+    animation: frame-flow 3s ease infinite;
+    
+    /* Keep your existing highlight */
+    border-bottom: 4px solid var(--yellow-highlight);
+}
+
+/* 3. The Animation Logic */
+@keyframes frame-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 .news-content {
     padding: 15px;
@@ -360,8 +381,8 @@ The main event, the Randox Grand National, is a thrilling 4-mile marathon featur
 </section>
 
 <section class="vvip-table-section">
-    <h3 class="upcoming-title" style="margin-bottom: 5px;">2026 EQUESTRIAN MAJORS</h3>
-    <p style="text-align: center; color: var(--text-gray); margin-bottom: 25px; font-size: 0.8rem;">[Source: UK Equestrian Calendar 2026]</p>
+    <h3 class="upcoming-title" style="margin-bottom: 5px;">2026 Uk  EQUESTRIAN MAJORS EVENTS</h3>
+    <p style="text-align: center; color: var(--text-gray); margin-bottom: 25px; font-size: 0.8rem;">[UK Calendar 2026]</p>
     
     <div class="vvip-table-container">
         <table class="vvip-table" id="equestrianTable">
@@ -375,20 +396,20 @@ The main event, the Randox Grand National, is a thrilling 4-mile marathon featur
                 </tr>
             </thead>
             <tbody>
-                <tr data-date="2026-03-10"><td>Cheltenham Festival</td><td>10-13 March</td><td>Jumps Racing</td><td>Cheltenham, Glos</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
-                <tr data-date="2026-04-09"><td>Grand National Meeting</td><td>9-11 April</td><td>Jumps Racing</td><td>Aintree, Liverpool</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
-                <tr data-date="2026-04-15"><td>Winter Dressage Championships</td><td>15-19 April</td><td>Dressage</td><td>Addington, Bucks</td><td><a href="#" class="event-link">More Info</a></td></tr>
-                <tr data-date="2026-05-01"><td>1,000 and 2,000 Guineas</td><td>1-3 May</td><td>Flat Racing</td><td>Newmarket</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
-                <tr data-date="2026-05-06"><td>Badminton Horse Trials</td><td>6-10 May</td><td>Eventing</td><td>Gloucestershire</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
-                <tr data-date="2026-05-14"><td>Royal Windsor Horse Show</td><td>14-17 May</td><td>Show Jumping</td><td>Windsor, Berkshire</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
-                <tr data-date="2026-06-05"><td>The Derby Meeting</td><td>5-6 June</td><td>Flat Racing</td><td>Epsom, Surrey</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
-                <tr data-date="2026-06-16"><td>Royal Ascot</td><td>16-20 June</td><td>Flat Racing</td><td>Ascot, Berkshire</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
-                <tr data-date="2026-07-21"><td>Royal International Horse Show</td><td>21-26 July</td><td>Showing</td><td>Hickstead, W. Sussex</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
-                <tr data-date="2026-08-07"><td>GCT London</td><td>7-9 August</td><td>Show Jumping</td><td>Chelsea, London</td><td><a href="#" class="event-link">More Info</a></td></tr>
-                <tr data-date="2026-09-03"><td>Burghley Horse Trials</td><td>3-6 September</td><td>Eventing</td><td>Stamford, Lincs</td><td><a href="#" class="event-link">More Info</a></td></tr>
-                <tr data-date="2026-10-07"><td>HOYS</td><td>7-11 October</td><td>Showjumping</td><td>Birmingham NEC</td><td><a href="#" class="event-link">More Info</a></td></tr>
-                <tr data-date="2026-12-17"><td>London International Horse Show</td><td>17-21 December</td><td>Multi-Discipline</td><td>ExCel, London</td><td><a href="#" class="event-link">Buy Tickets</a></td></tr>
-                <tr data-date="2026-12-26"><td>King George VI Chase</td><td>26 Dec</td><td>Jumps Racing</td><td>Kempton, Surrey</td><td><a href="#" class="event-link">More Info</a></td></tr>
+                <tr data-date="2026-03-10"><td>Cheltenham Festival</td><td>10-13 March</td><td>Jumps Racing</td><td>Cheltenham, Glos</td><td><a href="#" class="event-link">Up Next</a></td></tr>
+                <tr data-date="2026-04-09"><td>Grand National Meeting</td><td>9-11 April</td><td>Jumps Racing</td><td>Aintree, Liverpool</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-04-15"><td>Winter Dressage Championships</td><td>15-19 April</td><td>Dressage</td><td>Addington, Bucks</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-05-01"><td>1,000 and 2,000 Guineas</td><td>1-3 May</td><td>Flat Racing</td><td>Newmarket</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-05-06"><td>Badminton Horse Trials</td><td>6-10 May</td><td>Eventing</td><td>Gloucestershire</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-05-14"><td>Royal Windsor Horse Show</td><td>14-17 May</td><td>Show Jumping</td><td>Windsor, Berkshire</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-06-05"><td>The Derby Meeting</td><td>5-6 June</td><td>Flat Racing</td><td>Epsom, Surrey</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-06-16"><td>Royal Ascot</td><td>16-20 June</td><td>Flat Racing</td><td>Ascot, Berkshire</td><td><a href="#" class="event-link">In Progress</a></td></tr>
+                <tr data-date="2026-07-21"><td>Royal International Horse Show</td><td>21-26 July</td><td>Showing</td><td>Hickstead, W. Sussex</td><td><a href="#" class="event-link">In Progress</a></td></tr>
+                <tr data-date="2026-08-07"><td>GCT London</td><td>7-9 August</td><td>Show Jumping</td><td>Chelsea, London</td><td><a href="#" class="event-link">In Progress</a></td></tr>
+                <tr data-date="2026-09-03"><td>Burghley Horse Trials</td><td>3-6 September</td><td>Eventing</td><td>Stamford, Lincs</td><td><a href="#" class="event-link">In Progress</a></td></tr>
+                <tr data-date="2026-10-07"><td>HOYS</td><td>7-11 October</td><td>Showjumping</td><td>Birmingham NEC</td><td><a href="#" class="event-link">Later</a></td></tr>
+                <tr data-date="2026-12-17"><td>London International Horse Show</td><td>17-21 December</td><td>Multi-Discipline</td><td>ExCel, London</td><td><a href="#" class="event-link">Later</a></td></tr>
+                <tr data-date="2026-12-26"><td>King George VI Chase</td><td>26 Dec</td><td>Jumps Racing</td><td>Kempton, Surrey</td><td><a href="#" class="event-link">Later</a></td></tr>
             </tbody>
         </table>
     </div>
