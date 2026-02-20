@@ -145,11 +145,30 @@
     border-top: 2px solid var(--yellow-highlight);
 }
 .vvip-table-container {
-    overflow-x: auto;
+    /* SCROLL FEATURE ADDED HERE */
+    overflow-y: auto; 
+    max-height: 350px; /* Limits height to roughly 6-7 rows */
     border-radius: 15px;
     border: 1px solid rgba(152,251,152,0.2);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+    scroll-behavior: smooth;
 }
+/* Custom Scrollbar for the table */
+.vvip-table-container::-webkit-scrollbar {
+    width: 8px;
+}
+.vvip-table-container::-webkit-scrollbar-track {
+    background: var(--deep-blue-black);
+}
+.vvip-table-container::-webkit-scrollbar-thumb {
+    background: var(--dark-green);
+    border-radius: 10px;
+}
+.vvip-table-container::-webkit-scrollbar-thumb:hover {
+    background: var(--light-green);
+}
+
 .vvip-table {
     width: 100%;
     border-collapse: collapse;
@@ -166,6 +185,9 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     border-bottom: 2px solid var(--yellow-highlight);
+    position: sticky; /* Keeps header visible while scrolling */
+    top: 0;
+    z-index: 2;
 }
 .vvip-table td {
     padding: 12px 15px;
@@ -381,7 +403,7 @@ The main event, the Randox Grand National, is a thrilling 4-mile marathon featur
 </section>
 
 <section class="vvip-table-section">
-    <h3 class="upcoming-title" style="margin-bottom: 5px;">2026 Uk  EQUESTRIAN MAJORS EVENTS</h3>
+    <h3 class="upcoming-title" style="margin-bottom: 5px;">2026 Uk EQUESTRIAN MAJORS EVENTS</h3>
     <p style="text-align: center; color: var(--text-gray); margin-bottom: 25px; font-size: 0.8rem;">[UK Calendar 2026]</p>
     
     <div class="vvip-table-container">
@@ -413,7 +435,75 @@ The main event, the Randox Grand National, is a thrilling 4-mile marathon featur
             </tbody>
         </table>
     </div>
+
+    <h3 class="upcoming-title" style="margin-bottom: 5px;">2026 AUSTRALIAN MAJOR RACING EVENTS</h3>
+    <p style="text-align: center; color: var(--text-gray); margin-bottom: 25px; font-size: 0.8rem;">[AUSTRALIA Calendar 2026]</p>
+    
+    <div class="vvip-table-container">
+        <table class="vvip-table" id="australiaTable">
+            <thead>
+                <tr>
+                    <th>Race Name</th>
+                    <th>Date</th>
+                    <th>Racecourse</th>
+                    <th>State</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-date="2026-01-10"><td>Magic Millions 2YO Classic</td><td>10/01/2026</td><td>Gold Coast</td><td>QLD</td><td>Feature ($3M)</td></tr>
+                <tr data-date="2026-02-07"><td>C.F. Orr Stakes</td><td>07/02/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-14"><td>Black Caviar Lightning</td><td>14/02/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-21"><td>Blue Diamond Stakes</td><td>21/02/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-21"><td>Oakleigh Plate</td><td>21/02/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-21"><td>Futurity Stakes</td><td>21/02/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-28"><td>Australian Guineas</td><td>28/02/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-28"><td>Surround Stakes</td><td>28/02/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-28"><td>Verry Elleegant Stakes</td><td>28/02/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-07"><td>Newmarket Handicap</td><td>07/03/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-07"><td>All-Star Mile</td><td>07/03/2026</td><td>Flemington</td><td>VIC</td><td>Feature ($4M)</td></tr>
+                <tr data-date="2026-03-07"><td>Randwick Guineas</td><td>07/03/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-07"><td>Canterbury Stakes</td><td>07/03/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-14"><td>Coolmore Classic</td><td>14/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-21"><td>Golden Slipper Stakes</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1 ($5M)</td></tr>
+                <tr data-date="2026-03-21"><td>George Ryder Stakes</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-21"><td>Ranvet Stakes</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-21"><td>Rosehill Guineas</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-21"><td>The Galaxy</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-28"><td>Australian Cup</td><td>28/03/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-28"><td>Tancred Stakes</td><td>28/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-28"><td>Vinery Stud Stakes</td><td>28/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-04"><td>Doncaster Mile</td><td>04/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1 ($4M)</td></tr>
+                <tr data-date="2026-04-04"><td>T.J. Smith Stakes</td><td>04/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-04"><td>Australian Derby</td><td>04/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-04"><td>Sires' Produce Stakes</td><td>04/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-11"><td>Queen Elizabeth Stakes</td><td>11/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1 ($5M)</td></tr>
+                <tr data-date="2026-04-11"><td>Sydney Cup</td><td>11/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-11"><td>Australian Oaks</td><td>11/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-11"><td>Queen of the Turf Stakes</td><td>11/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-18"><td>All Aged Stakes</td><td>18/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-18"><td>Champagne Stakes</td><td>18/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-18"><td>The Quokka</td><td>18/04/2026</td><td>Ascot</td><td>WA</td><td>Feature ($5M)</td></tr>
+                <tr data-date="2026-05-02"><td>South Australian Derby</td><td>02/05/2026</td><td>Morphettville</td><td>SA</td><td>Group 1</td></tr>
+                <tr data-date="2026-05-09"><td>The Goodwood</td><td>09/05/2026</td><td>Morphettville</td><td>SA</td><td>Group 1</td></tr>
+                <tr data-date="2026-05-16"><td>Doomben 10,000</td><td>16/05/2026</td><td>Doomben</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-05-23"><td>Doomben Cup</td><td>23/05/2026</td><td>Doomben</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-06-06"><td>Queensland Oaks</td><td>06/06/2026</td><td>Eagle Farm</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-06-13"><td>Stradbroke Handicap</td><td>13/06/2026</td><td>Eagle Farm</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-06-13"><td>J.J. Atkins</td><td>13/06/2026</td><td>Eagle Farm</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-08-22"><td>Winx Stakes</td><td>22/08/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-10-17"><td>The Everest</td><td>17/10/2026</td><td>Randwick</td><td>NSW</td><td>Feature ($20M)</td></tr>
+                <tr data-date="2026-10-17"><td>Caulfield Cup</td><td>17/10/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1 ($5M)</td></tr>
+                <tr data-date="2026-10-24"><td>Cox Plate</td><td>24/10/2026</td><td>Moonee Valley</td><td>VIC</td><td>Group 1 ($5M)</td></tr>
+                <tr data-date="2026-10-31"><td>Victoria Derby</td><td>31/10/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-10-31"><td>Golden Eagle</td><td>31/10/2026</td><td>Rosehill</td><td>NSW</td><td>Feature ($10M)</td></tr>
+                <tr data-date="2026-11-03"><td>Melbourne Cup</td><td>03/11/2026</td><td>Flemington</td><td>VIC</td><td>Group 1 ($8M)</td></tr>
+                <tr data-date="2026-11-07"><td>Champions Stakes</td><td>07/11/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+            </tbody>
+        </table>
+    </div>
 </section>
+
 <section id="main-content">
     
     <div class="content-section" style="border-top-color: var(--light-green);">
@@ -617,7 +707,7 @@ The main event, the Randox Grand National, is a thrilling 4-mile marathon featur
                         userDisplay.innerText = "👤 " + name.toUpperCase();
                         userDisplay.style.display = "inline-block";
                         logVisitor(name);
-                        highlightNextEvent(); // Call highlighter after login
+                        highlightNextEvent(); // Updated to cover both tables
                     }, 500);
                 }, 2500);
 
@@ -651,28 +741,45 @@ muteBtn.addEventListener('click', () => {
 
 function openSite(t){window.open(t,"_blank")}function underMaintenance(){alert("🚧 This tracker is currently under maintenance. Please check back later!")}const themeToggle=document.getElementById("theme-toggle"),body=document.body;themeToggle.addEventListener("click",(()=>{body.classList.toggle("light-mode");const t=body.classList.contains("light-mode");themeToggle.innerHTML=t?"☀️":"🌙",themeToggle.setAttribute("aria-label",t?"Switch to Dark Mode":"Switch to Light Mode"),t?video.pause():video.play()}));function scrollToTop(){window.scrollTo({top:0,behavior:"smooth"})}function scrollToBottom(){window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})}function openInNewTab(t){const e=window.location.href.split("#")[0];window.open(e+t,"_blank")}let currentLayout=0;const layoutToggleBtn=document.getElementById("layout-toggle"),mainContent=document.getElementById("main-content"),layoutModes=["Default","Desktop","Mobile"],layoutClasses=["","desktop-layout","mobile-layout"];function toggleLayoutMode(){currentLayout=(currentLayout+1)%layoutModes.length,layoutToggleBtn.textContent=layoutModes[currentLayout],mainContent.classList.remove("desktop-layout","mobile-layout"),currentLayout>0&&mainContent.classList.add(layoutClasses[currentLayout]),mainContent.scrollIntoView({behavior:"smooth",block:"start"})}function updateTimes(){let t=new Date,e=t.toLocaleString("en-GB",{timeZone:"Europe/London",hour12:!0});document.getElementById("uk-time").innerText="🇬🇧 UK : "+e;let n=t.toLocaleString("en-GB",{timeZone:"Asia/Colombo",hour12:!0});document.getElementById("sl-time").innerText="🇱🇰 SL : "+n;let o=t.toLocaleString("en-GB",{timeZone:"Australia/Sydney",hour12:!0});document.getElementById("aus-time").innerText="🇦🇺 AUS : "+o;const a=t.toLocaleString("en-GB",{timeZone:"Asia/Colombo",hour:"2-digit",minute:"2-digit"}),l=t.toLocaleString("en-GB",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"}),s=t.toLocaleString("en-GB",{timeZone:"Australia/Sydney",hour:"2-digit",minute:"2-digit"}),r=document.getElementById("time-display-sl");r&&(r.innerText=a);const d=document.getElementById("time-display-uk");d&&(d.innerText=l);const i=document.getElementById("time-display-aus");i&&(i.innerText=s)}setInterval(updateTimes,1e3),updateTimes();function updateOffsetOptions(){const t=document.getElementById("country").value,e=document.getElementById("offset");e.innerHTML="";let n=[];"AUS"===t?n=["+06:30 (AEST/Daylight)","+07:30 (ACST/Standard)"]:"UK"===t&&(n=["+04:30 (GMT)","+05:30 (BST)"]);const o=document.createElement("option");o.value="",o.text="Select Offset...",e.appendChild(o),n.forEach((t=>{const n=document.createElement("option");n.value=t.split(" ")[0],n.text=t,e.appendChild(n)}))}updateOffsetOptions();function convert(){const t=document.getElementById("userTime").value,e=document.getElementById("offset").value,n=document.getElementById("output");if(!t||!e)return void(n.innerText="Error: Enter Time & Select Offset!");let[o,a]=t.split(":").map(Number);const l="+"===e[0]?1:-1;let[s,r]=e.slice(1).split(":").map(Number);let d=o*60+a+l*(60*s+r);d=(d%1440+1440)%1440;let i=Math.floor(d/60),u=d%60,c=("0"+i).slice(-2)+":"+("0"+u).slice(-2);n.innerText="🇱🇰 SL Time: "+c;const m=window.open("","_blank","width=300,height=200");m.document.write("<h1 style='font-family:sans-serif; text-align:center;'>SL Time: "+c+"</h1>")}function applyMonthlyUpdates(){const t=[{name:"Magic Millions",greet:"🎉 Happy New Year | 🏇 Carnival Season"},{name:"Blue Diamond",greet:"❄️ Stay Warm | 💎 Diamond Day"},{name:"Cheltenham Festival",greet:"🌱 Fresh Season | 🏆 Festival Glory"},{name:"Grand National",greet:"🌸 Happy Spring | 🏇 National Spirit"},{name:"Classic Trials",greet:"🏇 Race Season | 🌹 Classic Trials"},{name:"Royal Ascot",greet:"☀️ Summer Racing | 🎩 Royal Pageantry"},{name:"July Festival",greet:"🔥 Heat on Track | ☀️ Summer Sprint"},{name:"Ebor Prestige",greet:"🌊 Golden Days | 🏹 Ebor Prestige"},{name:"Classic Stakes",greet:"🍂 Fall Insights | 📜 Classic Stakes"},{name:"Reach the Peak",greet:"🎃 Spooky Wins | 🏔️ Reach the Peak"},{name:"Melbourne Cup",greet:"🌩️ Cold Strikes | 🇦🇺 Race That Stops a Nation"},{name:"Christmas / King George VI",greet:"🎄 Merry Christmas | 🏇 Boxing Day Classics"}],e=new Date,n=e.getMonth(),o=t[n],a=document.getElementById("monthly-greeting"),l=document.getElementById("snow-overlay");document.title="LSPublication|AGCN - "+o.name,a.innerText=o.greet,11===n?(l.style.display="block",a.style.color="#ff4d4d"):(l.style.display="none",a.style.color="var(--light-green)")}applyMonthlyUpdates();
 
-/* NEW AUTO HIGHLIGHT LOGIC FOR TABLE */
+/* AUTO HIGHLIGHT LOGIC FOR BOTH TABLES & AUTO SCROLL */
 function highlightNextEvent() {
-    const rows = document.querySelectorAll('#equestrianTable tbody tr');
+    const tableIds = ['#equestrianTable', '#australiaTable'];
     const today = new Date();
-    let closestEventRow = null;
-    let minDiff = Infinity;
 
-    rows.forEach(row => {
-        const eventDate = new Date(row.getAttribute('data-date'));
-        const diff = eventDate - today;
+    tableIds.forEach(id => {
+        const rows = document.querySelectorAll(id + ' tbody tr');
+        let closestEventRow = null;
+        let minDiff = Infinity;
 
-        if (diff > 0 && diff < minDiff) {
-            minDiff = diff;
-            closestEventRow = row;
+        rows.forEach(row => {
+            const eventDate = new Date(row.getAttribute('data-date'));
+            const diff = eventDate - today;
+
+            // Mark expired events (optional gray out)
+            if (diff < -86400000) {
+                row.style.opacity = "0.5";
+            }
+
+            // Find closest event in the future OR today
+            if (diff >= -86400000 && diff < minDiff) { 
+                minDiff = diff;
+                closestEventRow = row;
+            }
+        });
+
+        if (closestEventRow) {
+            closestEventRow.classList.add('next-event-row');
+            const eventCell = closestEventRow.cells[0];
+            if (!eventCell.innerHTML.includes("NEXT UP")) {
+                eventCell.innerHTML = `<span class="next-badge">NEXT UP</span>` + eventCell.innerHTML;
+            }
+            
+            // Auto scroll to the next event within the scroll container
+            setTimeout(() => {
+                closestEventRow.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+            }, 1000);
         }
     });
-
-    if (closestEventRow) {
-        closestEventRow.classList.add('next-event-row');
-        const eventCell = closestEventRow.cells[0];
-        eventCell.innerHTML = `<span class="next-badge">NEXT UP</span>` + eventCell.innerHTML;
-    }
 }
 </script>
 </body>
