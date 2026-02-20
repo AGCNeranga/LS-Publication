@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Charith Neranga">
+<meta name="canary-signature" content="LS-PUB-DATA-STREAMLINER-UNIQUE-882">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LS Racing Publication|AGCN</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+/* Minified Style Block */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}:root{--light-green:#98fb98;--yellow-highlight:#ffd700;--dark-green:#006400;--deep-blue-black:#101820;--medium-dark:#1e2733;--text-light:#f0f0f0;--text-gray:#aaa;--header-bg:rgba(16,24,32,0.95);--content-bg:rgba(30,39,51,0.75);--section-bg:rgba(16,24,32,0.7);--green-glow:0 0 10px var(--light-green);--scroll-btn-bg:rgba(152,251,152,0.9);--scroll-btn-color:var(--deep-blue-black)}.light-mode{--light-green:#006400;--yellow-highlight:#ff8c00;--dark-green:#98fb98;--deep-blue-black:#f0f0f0;--medium-dark:#ffffff;--text-light:#333333;--text-gray:#555;--header-bg:rgba(255,255,255,0.95);--content-bg:rgba(240,240,240,0.9);--section-bg:#ffffff;--green-glow:none;--scroll-btn-bg:rgba(0,100,0,0.9);--scroll-btn-color:#ffffff}.light-mode body{background-color:#e0e0e0!important;color:var(--text-light);filter:none!important}.light-mode body::before{background:rgba(224,224,224,0.8)!important;filter:none!important;background-image:none!important}.light-mode .tracker-link{background:#f0f0f0;color:var(--text-light);border-left-color:var(--light-green)}.light-mode .tracker-link:hover{background:#e0e0e0;color:var(--yellow-highlight);border-left-color:var(--yellow-highlight)}.snowflake{color:#fff;font-size:1.2em;font-family:Arial,sans-serif;text-shadow:0 0 5px rgba(255,255,255,1);position:fixed;top:-10%;z-index:9998;user-select:none;cursor:default;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}span,p,h1,h2,h3{font-family:"Segoe UI Emoji","Noto Color Emoji","Apple Color Emoji","Twemoji Mozilla","Poppins",sans-serif!important}.video-background{position:fixed;top:50%;left:50%;width:100vw;height:100vh;min-width:100%;min-height:100%;transform:translate(-50%,-50%);overflow:hidden;z-index:-2;pointer-events:none;opacity:0;transition:opacity 2.5s ease-in-out}.video-background video{position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);pointer-events:none}body{min-height:100vh;color:var(--text-light);overflow-x:hidden;background-color:var(--deep-blue-black);background-image:none;overflow-y:scroll}body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:none!important;background-size:cover;background-position:center;background-attachment:fixed;background-color:rgba(16,24,32,0.7);background-blend-mode:multiply;backdrop-filter:blur(2px);z-index:-1}header{width:100%;padding:15px 5%;background:var(--header-bg);backdrop-filter:blur(5px);position:fixed;top:0;left:0;z-index:100;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--dark-green);transition:background 0.5s}.header-left,.header-right{display:flex;align-items:center;gap:20px}.logo{font-family:'Orbitron',sans-serif;font-size:1.2rem;letter-spacing:1px;white-space:nowrap}.logo-icon{font-size:1.4rem;margin-right:5px;color:var(--yellow-highlight)}.logo-text{color:var(--light-green)}.logo-text .vip{color:var(--yellow-highlight);font-weight:800}.live-status{display:flex;align-items:center;color:var(--light-green);font-size:0.8rem;font-weight:600;padding-left:10px}.live-status::before{content:'';width:8px;height:8px;background-color:var(--light-green);border-radius:50%;margin-right:5px;box-shadow:0 0 5px var(--light-green);animation:pulse 1.5s infinite}@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(152,251,152,0.7)}70%{box-shadow:0 0 0 10px rgba(152,251,152,0)}100%{box-shadow:0 0 0 0 rgba(152,251,152,0)}}.quick-links-container{display:flex;align-items:center;gap:15px;margin-left:20px;border-left:1px solid rgba(170,170,170,0.3);padding-left:20px}.blink-link{color:var(--yellow-highlight);text-decoration:none;font-size:0.8rem;font-weight:700;font-family:'Orbitron',sans-serif;letter-spacing:0.5px;animation:linkGlow 2s infinite alternate;transition:transform 0.3s,color 0.3s}.blink-link:hover{color:var(--light-green);transform:scale(1.1);animation:none;text-shadow:0 0 8px var(--light-green)}@keyframes linkGlow{0%{opacity:0.7;text-shadow:0 0 0 transparent}100%{opacity:1;text-shadow:0 0 8px var(--yellow-highlight)}}#header-time-container{display:flex;gap:15px;font-size:0.8rem;color:var(--text-gray);font-family:'Orbitron',sans-serif;padding:0 10px}.header-time-item span{color:var(--yellow-highlight)}.nav-btn{background:var(--light-green);color:var(--deep-blue-black);padding:8px 20px;border:none;border-radius:5px;font-weight:700;cursor:pointer;transition:background 0.3s}.nav-btn:hover{background:white}.icon-btn{background:none;border:none;color:var(--text-light);font-size:1.4rem;cursor:pointer;transition:color 0.3s,transform 0.2s}.icon-btn:hover{color:var(--yellow-highlight);transform:scale(1.1)}#hero{min-height:70vh;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:0 5%;margin-top:60px;position:relative;overflow:hidden;background:rgba(16,24,32,0.2)}#hero h1{font-family:'Orbitron',sans-serif;font-size:3.5rem;color:var(--light-green);margin-bottom:20px;line-height:1.2;text-shadow:2px 2px 5px rgba(0,0,0,0.8);position:relative}#hero p{font-size:1.2rem;max-width:600px;color:var(--text-light);margin-bottom:30px;position:relative}.main-cta{background:linear-gradient(90deg,var(--light-green),var(--yellow-highlight));color:var(--deep-blue-black);font-size:1.2rem;font-weight:800;padding:15px 40px;border:none;border-radius:5px;cursor:pointer;transition:transform 0.3s;position:relative;box-shadow:0 0 15px var(--light-green)}.main-cta:hover{transform:translateY(-3px) scale(1.02)}#main-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;padding:50px 5%;background:var(--content-bg);backdrop-filter:blur(5px);transition:background 0.5s}#main-content.desktop-layout{grid-template-columns:repeat(3,minmax(300px,1fr))!important}#main-content.mobile-layout{grid-template-columns:1fr!important}.content-section{background:var(--section-bg);padding:30px;border-radius:5px;box-shadow:0 5px 20px rgba(0,0,0,0.5);border-top:3px solid var(--yellow-highlight);transition:transform 0.3s}.content-section:hover{transform:translateY(-5px)}.content-section h3{font-family:'Orbitron',sans-serif;font-size:1.6rem;color:var(--light-green);margin-bottom:15px;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:10px}.tracker-link{display:block;text-decoration:none;background:var(--medium-dark);color:var(--text-light);padding:15px;margin-bottom:10px;border-radius:3px;border-left:5px solid var(--dark-green);transition:background 0.2s,border-left 0.2s;font-weight:600}.tracker-link:hover{background:rgba(152,251,152,0.1);color:var(--yellow-highlight);border-left-color:var(--yellow-highlight)}.utility-block{grid-column:1 / -1;background:var(--section-bg);padding:40px 30px;border-radius:5px;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-around;align-items:flex-start;border:1px solid var(--light-green)}.time-display,.converter-container,.qr-container{flex:1 1 250px;min-width:200px}.time-display h3,.converter-container h3{border-bottom:1px solid var(--dark-green);padding-bottom:10px;margin-bottom:15px}.time-display p{font-size:1.1rem;margin:8px 0;color:var(--yellow-highlight);font-family:'Orbitron',sans-serif}#converter{background:var(--medium-dark);padding:15px;border-radius:5px;display:grid;gap:10px}#converter label{font-size:0.9rem;color:var(--text-gray)}#converter input,#converter select{background:var(--deep-blue-black);border:1px solid var(--dark-green);padding:8px;border-radius:3px;color:var(--text-light);width:100%}#converter button{background:var(--dark-green);color:var(--text-light);font-weight:600;padding:10px;border:none;border-radius:3px;cursor:pointer;transition:background 0.3s}#converter button:hover{background:var(--light-green);color:var(--deep-blue-black)}#output{color:var(--yellow-highlight);font-weight:700;text-align:center;margin-top:10px}.qr-container{display:flex;flex-direction:column;align-items:center;justify-content:center}.qr-container img{width:100px;height:100px;border:3px solid var(--yellow-highlight);padding:5px;border-radius:5px;background:white}.qr-container p{margin-top:10px;color:var(--yellow-highlight);font-weight:600}#image-gallery{grid-column:1 / -1;background:var(--section-bg);padding:40px 30px;border-radius:5px;border-top:3px solid var(--light-green);overflow:hidden;max-height:300px}#image-gallery h3{font-family:'Orbitron',sans-serif;font-size:1.6rem;color:var(--light-green);margin-bottom:25px;text-align:center}.gallery-grid{display:flex;width:max-content;gap:15px;padding-bottom:15px;animation:slide-show 30s linear infinite alternate}.gallery-grid img{width:300px;min-width:300px;height:180px;object-fit:contain;background:var(--deep-blue-black);border-radius:5px;opacity:0.9;transition:opacity 0.3s;box-shadow:0 4px 8px rgba(0,0,0,0.5);transform:none!important}.gallery-grid img:hover{opacity:1;transform:none}@keyframes slide-show{0%{transform:translateX(0)}100%{transform:translateX(-40%)}}footer{width:100%;text-align:center;padding:30px 0;background:var(--header-bg);border-top:1px solid var(--dark-green)}.footer-content{max-width:1200px;margin:0 auto;padding:0 20px}.footer-nav{display:flex;justify-content:center;gap:25px;margin-bottom:15px}.footer-link{color:var(--text-gray);text-decoration:none;font-size:0.9rem;font-weight:600;transition:color 0.3s;cursor:pointer}.footer-link:hover{color:var(--light-green)}.footer-copy{font-size:0.8rem;color:var(--text-gray)}.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);z-index:10000;display:none;justify-content:center;align-items:center;padding:20px}.modal-card{background:var(--medium-dark);border:2px solid var(--light-green);border-radius:15px;max-width:700px;width:100%;max-height:80vh;overflow-y:auto;padding:40px;position:relative;box-shadow:0 0 30px rgba(152,251,152,0.2);animation:modalIn 0.4s ease-out}@keyframes modalIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.close-modal{position:absolute;top:20px;right:20px;font-size:1.5rem;color:var(--text-gray);cursor:pointer;transition:color 0.3s}.close-modal:hover{color:var(--yellow-highlight)}.modal-card h2{font-family:'Orbitron',sans-serif;color:var(--light-green);margin-bottom:20px;border-bottom:1px solid var(--dark-green);padding-bottom:10px}.modal-body{color:var(--text-light);line-height:1.6;font-size:0.95rem}.modal-body p{margin-bottom:15px}.scroll-buttons{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:90}.scroll-btn{width:45px;height:45px;background:var(--scroll-btn-bg);color:var(--scroll-btn-color);border:none;border-radius:50%;cursor:pointer;font-size:1.5rem;line-height:1;box-shadow:0 4px 10px rgba(0,0,0,0.5);transition:background 0.3s,transform 0.3s}.scroll-btn:hover{background:var(--yellow-highlight);transform:scale(1.1)}@media(max-width:1200px){.header-time-item:not(.sl-time-item){display:none!important}}@media(max-width:900px){.header-left,.header-right{gap:10px}.logo{font-size:1rem}.quick-links-container{display:none}#header-time-container{display:none!important}#hero h1{font-size:2.5rem}#main-content{grid-template-columns:1fr}.footer-nav{flex-direction:column;gap:10px}}#name-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,0,0,1.9),rgba(0,0,0,0.9)),url('https://images.unsplash.com/photo-1548685913-fe6678babe8d?q=80&w=2000&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;justify-content:center;align-items:center;z-index:9999;transition:opacity 0.8s ease-in-out}.login-card{background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,1.9)),url('LS.jpg');background-size:cover;background-position:center;background-blend-mode:multiply;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:2px solid rgba(152,251,152,0.3);border-radius:20px;padding:50px 40px;text-align:center;width:50%;max-width:480px;box-shadow:0 20px 50px rgba(0,0,0,0.5);animation:floatCard 6s ease-in-out infinite;transform:perspective(1000px) rotateX(2deg);overflow:hidden}@keyframes floatCard{0%{transform:perspective(1000px) translateY(0px) rotateX(2deg)}50%{transform:perspective(1000px) translateY(-15px) rotateX(2deg)}100%{transform:perspective(1000px) translateY(0px) rotateX(2deg)}}#name-overlay h2{color:var(--light-green);font-family:'Orbitron',sans-serif;text-shadow:0 0 15px var(--light-green),0 0 30px var(--dark-green);font-size:2.2rem;margin-bottom:10px;letter-spacing:2px}.login-sub{color:#ccc;font-size:0.9rem;margin-bottom:30px;font-weight:300}#visitor-name, #visitor-pass{width:100%;padding:15px 20px;border-radius:50px;border:2px solid rgba(152,251,152,0.3);font-size:1rem;margin-bottom:15px;text-align:center;background:rgba(0,0,0,0.5);color:var(--yellow-highlight);outline:none;transition:all 0.3s;font-family:'Orbitron',sans-serif}#visitor-name:focus, #visitor-pass:focus{border-color:var(--yellow-highlight);box-shadow:0 0 20px rgba(255,215,0,0.4);transform:scale(1.02)}#visitor-name::placeholder, #visitor-pass::placeholder{color:rgba(255,255,255,0.4);font-family:'Poppins',sans-serif}#submit-name{background:linear-gradient(135deg,var(--dark-green),var(--light-green));color:var(--deep-blue-black);font-weight:800;padding:15px 40px;border:none;border-radius:50px;font-size:1.1rem;cursor:pointer;transition:all 0.3s;width:100%;text-transform:uppercase;letter-spacing:1px;box-shadow:0 10px 20px rgba(0,100,0,0.4);animation:pulseBtn 2s infinite}@keyframes pulseBtn{0%{box-shadow:0 0 0 0 rgba(152,251,152,0.7)}70%{box-shadow:0 0 0 15px rgba(152,251,152,0)}100%{box-shadow:0 0 0 0 rgba(152,251,152,0)}}.smooth-sri{text-align:center;font-size:15px;font-weight:bold;letter-spacing:2px}.yellow{color:yellow}.green{color:lightgreen}.smooth-sri span{opacity:0;display:inline-block;animation:fadeIn 0.6s forwards}.smooth-sri span:nth-child(1){animation-delay:0.4s}.smooth-sri span:nth-child(2){animation-delay:0.8s}.smooth-sri span:nth-child(3){animation-delay:1.2s}.smooth-sri span:nth-child(4){animation-delay:1.6s}.smooth-sri span:nth-child(5){animation-delay:2s}.smooth-sri span:nth-child(6){animation-delay:2.4s}.smooth-sri span:nth-child(7){animation-delay:2.8s}.smooth-sri span:nth-child(8){animation-delay:3.2s}.smooth-sri span:nth-child(9){animation-delay:3.6s}@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.blink-link{display:inline-flex;align-items:center;text-decoration:none;margin-right:15px;font-weight:bold}.blink-link img{width:80px;height:30px;margin-right:2px;border-radius:5px}.logo-container{text-align:center;margin-bottom:20px}.login-logo{max-width:150px;height:auto;display:block;margin:0 auto;filter:drop-shadow(0px 4px 6px rgba(0,0,0,0.1))}.login-card h2{margin-top:0;font-size:1.5rem;color:#333}
+
+/* NEW FEATURES STYLES */
+.ai-insight-badge {background: var(--yellow-highlight); color: #000; font-size: 0.6rem; padding: 2px 5px; border-radius: 3px; margin-left: 5px; font-weight: 800;}
+.interactive-tool { background: rgba(152,251,152,0.05); border: 1px dashed var(--light-green); padding: 10px; margin-top: 10px; border-radius: 5px; }
+.tool-input { width: 100%; background: #000; border: 1px solid var(--dark-green); color: var(--light-green); padding: 5px; margin: 5px 0; }
+
+/* User display badge in header */
+.user-login-badge {
+    background: rgba(152, 251, 152, 0.1);
+    border: 1px solid var(--light-green);
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: var(--yellow-highlight);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 15px;
+    display: none; /* Hidden until login */
+}
+
+/* LOADING SCREEN STYLES */
+#loading-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--deep-blue-black);
+    z-index: 10001;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    border: 8px solid rgba(152, 251, 152, 0.1);
+    border-top: 8px solid var(--light-green);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* NEW UPCOMING EVENTS STYLES */
+.upcoming-container {
+    padding: 30px 5%;
+    background: rgba(16,24,32,0.4);
+    border-bottom: 1px solid var(--dark-green);
+}
+.upcoming-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--yellow-highlight);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.news-card {
+    background: var(--medium-dark);
+    border: 1px solid var(--dark-green);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+}
+.news-card:hover {
+    border-color: var(--light-green);
+    box-shadow: 0 0 15px rgba(152, 251, 152, 0.2);
+    transform: translateY(-5px);
+}
+.news-img {
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 280px;
+    object-fit: cover;
+    
+    /* 1. Create the Frame Space */
+    padding: 5px; /* This determines the thickness of the frame */
+    border-radius: 8px; /* Optional: rounds the corners of the frame */
+    
+    /* 2. The Animated Gradient */
+    background: linear-gradient(45deg, #2ecc71, #f1c40f, #27ae60, #f39c12);
+    background-size: 400% 400%;
+    animation: frame-flow 3s ease infinite;
+    
+    /* Keep your existing highlight */
+    border-bottom: 4px solid var(--yellow-highlight);
+}
+
+/* 3. The Animation Logic */
+@keyframes frame-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.news-content {
+    padding: 15px;
+}
+.news-tag {
+    background: var(--dark-green);
+    color: var(--light-green);
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.news-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.news-card p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    line-height: 1.4;
+}
+
+/* --- PDF TABLE VVIP STYLES --- */
+.vvip-table-section {
+    padding: 50px 5%;
+    background: linear-gradient(to bottom, rgba(16,24,32,0.9), rgba(30,39,51,0.8));
+    border-top: 2px solid var(--yellow-highlight);
+}
+.vvip-table-container {
+    /* SCROLL FEATURE ADDED HERE */
+    overflow-y: auto; 
+    max-height: 350px; /* Limits height to roughly 6-7 rows */
+    border-radius: 15px;
+    border: 1px solid rgba(152,251,152,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+    scroll-behavior: smooth;
+}
+/* Custom Scrollbar for the table */
+.vvip-table-container::-webkit-scrollbar {
+    width: 8px;
+}
+.vvip-table-container::-webkit-scrollbar-track {
+    background: var(--deep-blue-black);
+}
+.vvip-table-container::-webkit-scrollbar-thumb {
+    background: var(--dark-green);
+    border-radius: 10px;
+}
+.vvip-table-container::-webkit-scrollbar-thumb:hover {
+    background: var(--light-green);
+}
+
+.vvip-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(16,24,32,0.6);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+.vvip-table th {
+    background: var(--dark-green);
+    color: var(--yellow-highlight);
+    font-family: 'Orbitron', sans-serif;
+    text-align: left;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--yellow-highlight);
+    position: sticky; /* Keeps header visible while scrolling */
+    top: 0;
+    z-index: 2;
+}
+.vvip-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(170,170,170,0.1);
+    transition: 0.3s;
+}
+.vvip-table tr:hover td {
+    background: rgba(152,251,152,0.05);
+    color: var(--yellow-highlight);
+}
+.event-link {
+    color: var(--light-green);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--light-green);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    transition: 0.3s;
+}
+.event-link:hover {
+    background: var(--light-green);
+    color: var(--deep-blue-black);
+}
+.next-event-row {
+    background: rgba(255, 215, 0, 0.1) !important;
+    border-left: 5px solid var(--yellow-highlight);
+    box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.1);
+}
+.next-badge {
+    background: var(--yellow-highlight);
+    color: #000;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    margin-right: 10px;
+    animation: pulseGlow 1.5s infinite;
+}
+@keyframes pulseGlow {
+    0% {box-shadow: 0 0 0px var(--yellow-highlight);}
+    50% {box-shadow: 0 0 10px var(--yellow-highlight);}
+    100% {box-shadow: 0 0 0px var(--yellow-highlight);}
+}
+</style>
+</head>
+<body class="dark-mode"> 
+
+<script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123) return false; // F12
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Inspect
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Inspect
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Console
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // View Source
+    };
+</script>
+
+<div id="loading-screen">
+    <div class="loader"></div>
+    <p style="color:var(--light-green); font-family:'Orbitron', sans-serif; margin-top:20px; letter-spacing:2px;">Converting. Connecting. Recording.</p>
+</div>
+
+<div class="snow-container" id="snow-overlay" style="display:none;">
+    <div class="snowflake" style="left:10%; animation-delay:0s;">❅</div>
+    <div class="snowflake" style="left:20%; animation-delay:1s;">❆</div>
+    <div class="snowflake" style="left:30%; animation-delay:6s;">❅</div>
+    <div class="snowflake" style="left:40%; animation-delay:4s;">❆</div>
+    <div class="snowflake" style="left:50%; animation-delay:2s;">❅</div>
+    <div class="snowflake" style="left:60%; animation-delay:8s;">❆</div>
+    <div class="snowflake" style="left:70%; animation-delay:3s;">❅</div>
+    <div class="snowflake" style="left:80%; animation-delay:5s;">❆</div>
+    <div class="snowflake" style="left:90%; animation-delay:10s;">❅</div>
+    <div class="snowflake" style="left:5%; animation-delay:7s;">❆</div>
+    <div class="snowflake" style="left:15%; animation-delay:2s;">❅</div>
+    <div class="snowflake" style="left:25%; animation-delay:4s;">❆</div>
+    <div class="snowflake" style="left:35%; animation-delay:1s;">❅</div>
+    <div class="snowflake" style="left:45%; animation-delay:9s;">❆</div>
+    <div class="snowflake" style="left:55%; animation-delay:3s;">❅</div>
+    <div class="snowflake" style="left:65%; animation-delay:5s;">❆</div>
+    <div class="snowflake" style="left:75%; animation-delay:7s;">❅</div>
+    <div class="snowflake" style="left:85%; animation-delay:11s;">❆</div>
+    <div class="snowflake" style="left:95%; animation-delay:2s;">❅</div>
+</div>
+
+<div id="name-overlay">
+    <div class="login-card">
+        <div class="logo-container">
+            <img src="https://leisuresportsholdings.com/images/logo.png" alt="Company Logo" class="login-logo">
+        </div>
+
+        <h2>Data Control Hub</h2>
+        <p class="login-sub">Enter Your Credentials to Proceed</p>
+        <input id="visitor-name" type="text" placeholder="Username" autocomplete="off" />
+        <input id="visitor-pass" type="password" placeholder="Password" autocomplete="off" />
+        <button id="submit-name">Verify & Enter</button>
+    </div>
+</div>
+
+<div id="info-modal" class="modal-overlay">
+    <div class="modal-card">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title">Title</h2>
+        <div id="modal-content" class="modal-body">
+            </div>
+    </div>
+</div>
+
+<div class="video-background" id="video-wrapper">
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="lsbet2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<header>
+    <div class="header-left">
+    <div class="logo">
+        <a href="zz1.html">
+            <img src="" alt="" class="logo-icon" style="height:20px;">
+        </a>
+        <span class="logo-text"><span class="vip">LS</span>Publication</span>
+        <span id="monthly-greeting" style="font-size: 0.7rem; color: #ff4d4d; margin-left: 10px; vertical-align: middle;"></span>
+    </div>
+    <div class="live-status">LIVE</div>
+    
+    <div class="quick-links-container">
+    <a href="https://www.punters.com.au/" target="_blank" class="blink-link" title="Visit Punters">
+        <img src="https://puntcdn.com/icons/punterslogodesktop.svg" alt="Punters Logo">
+    </a>
+    <a href="https://www.attheraces.com/" target="_blank" class="blink-link" title="Visit AtTheRaces">
+        <img src="https://www.attheraces.com/resources/img/branding/logo.png" alt="ATR Logo">
+    </a>
+    <a href="https://schedule.skyracing.com.au/" target="_blank" class="blink-link" title="Sky Racing Schedule">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/93/Sky_au_racing.png" alt="Sky Logo">
+    </a>
+     <a href="https://www.timeanddate.com/time/change/uk" target="_blank" class="blink-link" title="The Time and Date">
+        <img src="https://c.tadst.com/gfx/og/tadlogo-facebook.png" alt="Time and Date Logo">
+    </a>
+    
+    </div>
+    </div>
+
+    <div class="header-right">
+        
+        <div id="header-time-container">
+            <div id="header-sl-time" class="header-time-item sl-time-item">🇱🇰 SL: <span id="time-display-sl">--:--</span></div>
+            <div id="header-uk-time" class="header-time-item">🇬🇧 UK: <span id="time-display-uk">--:--</span></div>
+            <div id="header-aus-time" class="header-time-item">🇦🇺 AUS: <span id="time-display-aus">--:--</span></div>
+
+        </div>
+        
+        <button id="mute-toggle" class="icon-btn" aria-label="Toggle Video Sound">
+            🔇 </button>
+
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+            🌙
+        </button>
+        
+        <div id="user-display" class="user-login-badge">👤 GUEST</div>
+        
+    
+        
+        <button class="nav-btn" onclick="document.getElementById('main-content').scrollIntoView({ behavior: 'smooth' })">VIEW TRACKERS</button>
+        
+        <button class="nav-btn" onclick="document.getElementById('converter').scrollIntoView({ behavior: 'smooth' })">TIME CONVERTER</button>
+ 
+        <button id="layout-toggle" class="nav-btn" onclick="toggleLayoutMode()">Default</button>
+        </div>
+</header>
+
+<section id="hero">
+    <h1>Leisure Sports Holdings<br>
+        <span style="color:var(--yellow-highlight);">Internal Data Streamliner V2.0</span></h1>
+<p>Designed by the Leisure Sports Publication Racing Department team, this portal transforms hours of manual entry into seconds of automated precision. By converting thousands of lines of complex racing data instantly, we empower our employees to work with accuracy and ease, eliminating the pressure of time-sensitive updates. This is our commitment to a smarter, stress-free workplace where technology handles the heavy lifting, so you can focus on excellence.</p>
+
+    <button class="main-cta" onclick="openSite('https://agcneranga.github.io/Tips/')">Access UK RaceTips Editor Now</button>
+</section>
+
+<section class="upcoming-container">
+    <h3 class="upcoming-title">UPCOMING RACING EVENTS</h3>
+    <div class="news-grid">
+        <article class="news-card">
+            <img src="c1.png" class="news-img" alt="Cheltenham">
+            <div class="news-content">
+                <span class="news-tag">March 10th – 13th, 2026</span>
+                <h4>Cheltenham Festival</h4>
+                <p>The Cheltenham Festival is the undisputed jewel in the crown of National Hunt racing, held annually at Prestbury Park in Gloucestershire. This four-day spectacular in March is a sensory overload, combining elite Grade 1 racing with an unparalleled social atmosphere.
+
+From the legendary "Cheltenham Roar" that greets the start of the opening race to the electric tension of the Cheltenham Gold Cup on Friday, the event represents the pinnacle of sporting achievement. It is a unique fusion of Irish fervor and British tradition, where champions are forged and legends are made amidst a backdrop of high-stakes betting and vibrant fashion.</p>
+            </div>
+        </article>
+        <article class="news-card">
+            <img src="c2.png" class="news-img" alt="Australia Racing">
+            <div class="news-content">
+                <span class="news-tag">April 9th – 11th, 2026</span>
+                <h4>Grand National Meeting</h4>
+                <p>The Grand National Meeting at Aintree is the crown jewel of steeplechase racing. Over three exhilarating days, it combines top-tier sporting action with unparalleled social glamour.
+
+The main event, the Randox Grand National, is a thrilling 4-mile marathon featuring 30 iconic fences that test courage and stamina to the limit. Whether you are aiming for the high fashion of Ladies Day or looking to pick the winner of the world's most famous race, Aintree delivers an unforgettable atmosphere.</p>
+            </div>
+        </article>
+        <article class="news-card">
+            <img src="c3.png" class="news-img" alt="Grand National">
+            <div class="news-content">
+                <span class="news-tag">April 15th – 19th, 2026</span>
+                <h4>Winter Dressage Championships</h4>
+                <p>Experience the pinnacle of equine artistry at the Winter Dressage Championships at Addington Equestrian. This prestigious event brings together the nation's finest horse-and-rider partnerships to compete in a dazzling display of precision, harmony, and power. Featuring top-tier freestyle routines to music and intense championship showdowns, it is the ultimate showcase of talent in a luxurious, VVIP atmosphere.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="vvip-table-section">
+    <h3 class="upcoming-title" style="margin-bottom: 5px;">2026 Uk EQUESTRIAN MAJORS EVENTS</h3>
+    <p style="text-align: center; color: var(--text-gray); margin-bottom: 25px; font-size: 0.8rem;">[UK Calendar 2026]</p>
+    
+    <div class="vvip-table-container">
+        <table class="vvip-table" id="equestrianTable">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Sport</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-date="2026-03-10"><td>Cheltenham Festival</td><td>10-13 March</td><td>Jumps Racing</td><td>Cheltenham, Glos</td><td><a href="#" class="event-link">Up Next</a></td></tr>
+                <tr data-date="2026-04-09"><td>Grand National Meeting</td><td>9-11 April</td><td>Jumps Racing</td><td>Aintree, Liverpool</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-04-15"><td>Winter Dressage Championships</td><td>15-19 April</td><td>Dressage</td><td>Addington, Bucks</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-05-01"><td>1,000 and 2,000 Guineas</td><td>1-3 May</td><td>Flat Racing</td><td>Newmarket</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-05-06"><td>Badminton Horse Trials</td><td>6-10 May</td><td>Eventing</td><td>Gloucestershire</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-05-14"><td>Royal Windsor Horse Show</td><td>14-17 May</td><td>Show Jumping</td><td>Windsor, Berkshire</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-06-05"><td>The Derby Meeting</td><td>5-6 June</td><td>Flat Racing</td><td>Epsom, Surrey</td><td><a href="#" class="event-link">Loading...</a></td></tr>
+                <tr data-date="2026-06-16"><td>Royal Ascot</td><td>16-20 June</td><td>Flat Racing</td><td>Ascot, Berkshire</td><td><a href="#" class="event-link">In Progress</a></td></tr>
+                <tr data-date="2026-07-21"><td>Royal International Horse Show</td><td>21-26 July</td><td>Showing</td><td>Hickstead, W. Sussex</td><td><a href="#" class="event-link">In Progress</a></td></tr>
+                <tr data-date="2026-08-07"><td>GCT London</td><td>7-9 August</td><td>Show Jumping</td><td>Chelsea, London</td><td><a href="#" class="event-link">In Progress</a></td></tr>
+                <tr data-date="2026-09-03"><td>Burghley Horse Trials</td><td>3-6 September</td><td>Eventing</td><td>Stamford, Lincs</td><td><a href="#" class="event-link">In Progress</a></td></tr>
+                <tr data-date="2026-10-07"><td>HOYS</td><td>7-11 October</td><td>Showjumping</td><td>Birmingham NEC</td><td><a href="#" class="event-link">Later</a></td></tr>
+                <tr data-date="2026-12-17"><td>London International Horse Show</td><td>17-21 December</td><td>Multi-Discipline</td><td>ExCel, London</td><td><a href="#" class="event-link">Later</a></td></tr>
+                <tr data-date="2026-12-26"><td>King George VI Chase</td><td>26 Dec</td><td>Jumps Racing</td><td>Kempton, Surrey</td><td><a href="#" class="event-link">Later</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="upcoming-title" style="margin-bottom: 5px;">2026 AUSTRALIAN MAJOR RACING EVENTS</h3>
+    <p style="text-align: center; color: var(--text-gray); margin-bottom: 25px; font-size: 0.8rem;">[AUSTRALIA Calendar 2026]</p>
+    
+    <div class="vvip-table-container">
+        <table class="vvip-table" id="australiaTable">
+            <thead>
+                <tr>
+                    <th>Race Name</th>
+                    <th>Date</th>
+                    <th>Racecourse</th>
+                    <th>State</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-date="2026-01-10"><td>Magic Millions 2YO Classic</td><td>10/01/2026</td><td>Gold Coast</td><td>QLD</td><td>Feature ($3M)</td></tr>
+                <tr data-date="2026-02-07"><td>C.F. Orr Stakes</td><td>07/02/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-14"><td>Black Caviar Lightning</td><td>14/02/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-21"><td>Blue Diamond Stakes</td><td>21/02/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-21"><td>Oakleigh Plate</td><td>21/02/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-21"><td>Futurity Stakes</td><td>21/02/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-28"><td>Australian Guineas</td><td>28/02/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-28"><td>Surround Stakes</td><td>28/02/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-02-28"><td>Verry Elleegant Stakes</td><td>28/02/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-07"><td>Newmarket Handicap</td><td>07/03/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-07"><td>All-Star Mile</td><td>07/03/2026</td><td>Flemington</td><td>VIC</td><td>Feature ($4M)</td></tr>
+                <tr data-date="2026-03-07"><td>Randwick Guineas</td><td>07/03/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-07"><td>Canterbury Stakes</td><td>07/03/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-14"><td>Coolmore Classic</td><td>14/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-21"><td>Golden Slipper Stakes</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1 ($5M)</td></tr>
+                <tr data-date="2026-03-21"><td>George Ryder Stakes</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-21"><td>Ranvet Stakes</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-21"><td>Rosehill Guineas</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-21"><td>The Galaxy</td><td>21/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-28"><td>Australian Cup</td><td>28/03/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-28"><td>Tancred Stakes</td><td>28/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-03-28"><td>Vinery Stud Stakes</td><td>28/03/2026</td><td>Rosehill</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-04"><td>Doncaster Mile</td><td>04/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1 ($4M)</td></tr>
+                <tr data-date="2026-04-04"><td>T.J. Smith Stakes</td><td>04/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-04"><td>Australian Derby</td><td>04/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-04"><td>Sires' Produce Stakes</td><td>04/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-11"><td>Queen Elizabeth Stakes</td><td>11/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1 ($5M)</td></tr>
+                <tr data-date="2026-04-11"><td>Sydney Cup</td><td>11/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-11"><td>Australian Oaks</td><td>11/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-11"><td>Queen of the Turf Stakes</td><td>11/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-18"><td>All Aged Stakes</td><td>18/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-18"><td>Champagne Stakes</td><td>18/04/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-04-18"><td>The Quokka</td><td>18/04/2026</td><td>Ascot</td><td>WA</td><td>Feature ($5M)</td></tr>
+                <tr data-date="2026-05-02"><td>South Australian Derby</td><td>02/05/2026</td><td>Morphettville</td><td>SA</td><td>Group 1</td></tr>
+                <tr data-date="2026-05-09"><td>The Goodwood</td><td>09/05/2026</td><td>Morphettville</td><td>SA</td><td>Group 1</td></tr>
+                <tr data-date="2026-05-16"><td>Doomben 10,000</td><td>16/05/2026</td><td>Doomben</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-05-23"><td>Doomben Cup</td><td>23/05/2026</td><td>Doomben</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-06-06"><td>Queensland Oaks</td><td>06/06/2026</td><td>Eagle Farm</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-06-13"><td>Stradbroke Handicap</td><td>13/06/2026</td><td>Eagle Farm</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-06-13"><td>J.J. Atkins</td><td>13/06/2026</td><td>Eagle Farm</td><td>QLD</td><td>Group 1</td></tr>
+                <tr data-date="2026-08-22"><td>Winx Stakes</td><td>22/08/2026</td><td>Randwick</td><td>NSW</td><td>Group 1</td></tr>
+                <tr data-date="2026-10-17"><td>The Everest</td><td>17/10/2026</td><td>Randwick</td><td>NSW</td><td>Feature ($20M)</td></tr>
+                <tr data-date="2026-10-17"><td>Caulfield Cup</td><td>17/10/2026</td><td>Caulfield</td><td>VIC</td><td>Group 1 ($5M)</td></tr>
+                <tr data-date="2026-10-24"><td>Cox Plate</td><td>24/10/2026</td><td>Moonee Valley</td><td>VIC</td><td>Group 1 ($5M)</td></tr>
+                <tr data-date="2026-10-31"><td>Victoria Derby</td><td>31/10/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+                <tr data-date="2026-10-31"><td>Golden Eagle</td><td>31/10/2026</td><td>Rosehill</td><td>NSW</td><td>Feature ($10M)</td></tr>
+                <tr data-date="2026-11-03"><td>Melbourne Cup</td><td>03/11/2026</td><td>Flemington</td><td>VIC</td><td>Group 1 ($8M)</td></tr>
+                <tr data-date="2026-11-07"><td>Champions Stakes</td><td>07/11/2026</td><td>Flemington</td><td>VIC</td><td>Group 1</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="main-content">
+    
+    <div class="content-section" style="border-top-color: var(--light-green);">
+        <h3>🇬🇧 UNITED KINGDOM</h3>
+        <a href="https://agcneranga.github.io/UK-VIP/" target="_blank" class="tracker-link">Top UK Race 1 Tracker <span class="ai-insight-badge">TOP</span></a>
+        <a href="https://agcneranga.github.io/UKVIP2/" target="_blank" class="tracker-link">VIP RACE GUIDE(THE STABLES)<span class="ai-insight-badge">VIP</span></a>
+        <a href="https://agcneranga.github.io/uk-EXCEL-pro/" target="_blank" class="tracker-link">UK Excel Tracker <span class="ai-insight-badge">NEW</span> </a>
+        <a href="https://agcneranga.github.io/UKVIPTIPS/" target="_blank" class="tracker-link">UK VIP TIPS Tracker </a>
+    </div>
+
+    <div class="content-section" style="border-top-color: var(--yellow-highlight);">
+        <h3>🇦🇺 AUSTRALIA</h3>
+        <a href="https://agcneranga.github.io/AUS-VIP/" target="_blank" class="tracker-link">Top AUSSI (TARR|HARR) Race Tracker  <span class="ai-insight-badge">TOP</span></a>
+        <a href="https://agcneranga.github.io/AUS-KH/" target="_blank" class="tracker-link">AUSSI v9.00 (HARR) Marker<span class="ai-insight-badge">EDIT</span></a>
+        <a href="https://agcneranga.github.io/AUS-Horsecodes/" target="_blank" class="tracker-link">AUSSI Code Abbrevation Marker<span class="ai-insight-badge">NEW</span></a>
+        <a href="https://agcneranga.github.io/AUSSI-F-Page/" target="_blank" class="tracker-link">AUSSI FIRST PAGE</a>
+    </div>
+
+   
+
+    <div class="content-section" style="border-top-color: var(--dark-red);">
+        <h3> 🇬🇧 EXTRA </h3>
+        <a href="https://agcneranga.github.io/UK-DAILY-RACE/" target="_blank" class="tracker-link">DAILY RACING PROGRAMME<span class="ai-insight-badge">NEW</span></a>
+        <a href="https://lsrating.netlify.app/" target="_blank" class="tracker-link">Rating System(UK) imac <span class="ai-insight-badge">NEW</span></a>
+        <a href="https://windowsrating.netlify.app/" target="_blank" class="tracker-link">Rating System(UK) Windows <span class="ai-insight-badge">NEW</span></a>
+        <a href="https://ukfestivals2026.netlify.app/" target="_blank" class="tracker-link">UK FESTIVAL Ante-Post<span class="ai-insight-badge">NEW</span></a>
+
+
+    </div>
+
+
+      <div class="content-section" style="border-top-color: var(--yellow-highlight);">
+        <h3>🇫🇷 FRANCE</h3>
+        <a href="#" onclick="underMaintenance()" class="tracker-link">Top FRANCE Race Tracker</a>
+        <a href="#" onclick="underMaintenance()" class="tracker-link">FRANCE Tracker 2 </a>
+
+
+    </div>
+
+    <div class="content-section" style="border-top-color: var(--dark-green);">
+        <h3>🇩🇪 GERMANY</h3>
+        <a href="#" onclick="underMaintenance()" class="tracker-link">Top GERMANY Race Tracker</a>
+        <a href="#" onclick="underMaintenance()" class="tracker-link">GERMANY Tracker 2</a>
+</div>
+
+    <div class="utility-block">
+        
+        <div class="time-display">
+            <h3>Live Global Time</h3>
+            <p id="uk-time">🇬🇧 UK : Loading...</p>
+            <p id="sl-time">🇱🇰 SL : Loading...</p>
+            <p id="aus-time">🇦🇺 AUS : Loading...</p>
+        </div>
+
+        <div class="converter-container">
+            <h3> Time Zone Converter</h3>
+
+
+
+        <h4 class="smooth-sri">
+  <span class="yellow">S</span>
+
+  <span class="yellow">R</span>
+  <span class="yellow">I</span>
+  <span>&nbsp;</span>
+  <span class="green">L</span>
+  <span class="green">A</span>
+  <span class="green">N</span>
+  <span class="green">K</span>
+  <span class="green">A</span>
+</h4>
+
+
+
+            <div id="converter">
+                <label>Enter Time (UK / AUS):</label>
+                <input type="time" id="userTime">
+                <label>Select Country:</label>
+                <select id="country" onchange="updateOffsetOptions()">
+                    <option value="AUS">AUS</option>
+                    <option value="UK">UK</option>
+                </select>
+                <label>Select Offset:</label>
+                <select id="offset"></select>
+                <button onclick="convert()">Convert to SL Time</button>
+                <div id="output"></div>
+            </div>
+        </div>
+        
+        <div class="qr-container">
+            <h3>Quick Access</h3>
+            <img src="qr.png" alt="VIP QR Code" class="qr-img" width="100" height="100"> 
+            <p>Scan to Join</p>
+        </div>
+    </div>
+    
+    <div id="image-gallery">
+        <h3> </h3> <div class="gallery-grid">
+
+    <img src="https://media.licdn.com/dms/image/v2/D5622AQFBv2hQ_HKFHg/feedshare-shrink_800/B56Zqz4YLsJQAg-/0/1763954493508?e=2147483647&v=beta&t=-6gAvrQL78WyzGatc4fKqywxI3eCmg3lhaHhWLtAQPA">
+
+    <img src="https://zoelouisesmithx.com/wp-content/uploads/2021/03/flemington-2.jpg">
+
+    <img src="https://fox5sandiego.com/wp-content/uploads/sites/15/2022/11/AP22319572704165.jpg?w=1280">
+     
+    <img src="https://racingclub.com/wp-content/uploads/2024/12/how-does-tote-betting-work-in-horse-racing-1024x562.jpg">
+     
+    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/68/71/01.jpg">
+     
+    <img src="https://entertainment.hkjc.com//consvc.hkjc.com/-/media/Sites/JCEW/Entertainment/images/HVRC/PrivateBox/venues-hvrc-private-box-01.jpg?rev=d257887631904265845552ad9cbec22c&sc_lang=en-US">
+            <img src="https://www.discoverhongkong.com/content/dam/dhk/intl/explore/dining/unique-dining-at-hong-kong-racecourses/vantage-02.jpg">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Statue_of_Silent_Witness.jpg">
+              <img src="https://webassets.sen.com.au/articles/51bf2af69457250fc71844408fc9ca52.jpeg">
+              <img src="https://jockeyandagents.weebly.com/uploads/1/4/4/9/144986447/published/meydan-racecourse.png?1678471416">
+                          <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/hipodromo_pista_1500x610.jpg">
+
+                          <img src="https://www.eventmasters.co.uk/wp-content/uploads/2023/10/Cheltenham-April-Meeting-2024-Cheltenham-Racecourse-Private-Grandstand-Box-Hospitality-Horse-Racing.jpg">
+
+                          <img src="">
+
+            
+              
+              
+
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-nav">
+            <a class="footer-link" onclick="openModal('about')">ABOUT US</a>
+            <a class="footer-link" onclick="openModal('terms')">TERMS OF SERVICE</a>
+            <a class="footer-link" onclick="openModal('privacy')">PRIVACY POLICY</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 | LS Publication Racing Dept. | Developed by Charith Neranga
+        </div>
+    </div>
+</footer>
+
+<div class="scroll-buttons">
+    <button class="scroll-btn" onclick="scrollToTop()" aria-label="Scroll to Top">▲</button>
+    <button class="scroll-btn" onclick="scrollToBottom()" aria-label="Scroll to Bottom">▼</button>
+</div>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js";
+    const firebaseConfig = {apiKey: "AIzaSyDbwTC7BsmiVgQ8lAwMb6oxUlgsZV6_ukY",authDomain: "vipdashboard-14354.firebaseapp.com",projectId: "vipdashboard-14354",storageBucket: "vipdashboard-14354.app",messagingSenderId: "473646422817",appId: "1:473646422817:web:725c533872395a442afc60",measurementId: "G-DYMCWEQYEQ",databaseURL: "https://vipdashboard-14354-default-rtdb.firebaseio.com/"};
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    function detectBrowser() {const ua = navigator.userAgent;if (ua.includes("Chrome") && !ua.includes("Edg")) return "Chrome";if (ua.includes("Firefox")) return "Firefox";if (ua.includes("Safari") && !ua.includes("Chrome")) return "Safari";if (ua.includes("Edg")) return "Edge";if (ua.includes("Opera") || ua.includes("OPR")) return "Opera";return "Unknown";}
+    function detectOS() {const ua = navigator.userAgent;if (ua.includes("Win")) return "Windows";if (ua.includes("Mac")) return "MacOS";if (ua.includes("Linux")) return "Linux";if (ua.includes("Android")) return "Android";if (ua.includes("iPhone") || ua.includes("iPad")) return "iOS";return "Unknown";}
+    async function logVisitor(name) {try {const response = await fetch('https://ipapi.co/json/');const data = await response.json();const visitorData = {name: name || "Anonymous",timestamp: new Date().toISOString(),ip: data.ip,country: data.country_name,region: data.region,city: data.city,browser: detectBrowser(),os: detectOS(),userAgent: navigator.userAgent,language: navigator.language,url: window.location.href};const visitorsRef = ref(database, 'visitors');push(visitorsRef, visitorData);} catch(err) {console.error("Error logging visitor:", err);}}
+    
+    // Login User Database
+    const users = {
+        "admin": "admin1234",
+        "uchitha": "uchitha1234",
+        "raja": "raja1234",
+        "rasanga": "rasanga1234",
+        "charith": "charith1234",
+        "maleesha": "maleesha1234",
+        "theekshana": "theekshana1234",
+        "chanaka": "chanaka1234",
+        "sanjeewa": "sanjeewa1234",
+        "mangala": "mangala1234"
+    };
+
+    const overlay = document.getElementById('name-overlay');
+    const inputName = document.getElementById('visitor-name');
+    const inputPass = document.getElementById('visitor-pass');
+    const submitBtn = document.getElementById('submit-name');
+    const userDisplay = document.getElementById('user-display');
+    const loader = document.getElementById('loading-screen');
+    const videoWrapper = document.getElementById('video-wrapper');
+
+    submitBtn.addEventListener('click', () => {
+        const name = inputName.value.trim().toLowerCase();
+        const pass = inputPass.value.trim();
+        
+        if (users[name] && users[name] === pass) {
+            overlay.style.opacity = '0';
+            
+            setTimeout(() => { 
+                overlay.style.display = 'none'; 
+                loader.style.display = 'flex';
+                
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    loader.style.transition = 'opacity 0.5s ease';
+                    
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                        
+                        // NEW REVEAL VIDEO LOGIC
+                        videoWrapper.style.opacity = '1';
+                        
+                        userDisplay.innerText = "👤 " + name.toUpperCase();
+                        userDisplay.style.display = "inline-block";
+                        logVisitor(name);
+                        highlightNextEvent(); // Updated to cover both tables
+                    }, 500);
+                }, 2500);
+
+            }, 800);
+            
+        } else {
+            alert("Invalid Username or Password!");
+        }
+    });
+
+    inputName.addEventListener('keypress', (e) => {if(e.key === 'Enter'){ inputPass.focus(); }});
+    inputPass.addEventListener('keypress', (e) => {if(e.key === 'Enter'){ submitBtn.click(); }});
+</script>
+
+<script>
+const modalContent={about:{title:"ABOUT LS PUBLICATION",body:`<p>LS Publication is a premium sports data analysis firm specializing in international horse racing markets. Established in Sri Lanka, we provide real-time tracking, predictive analysis, and insider insights for the UK and Australian racing seasons. Our mission is to bridge the gap between complex racing data and actionable intelligence for our Employees and Customers. By utilizing advanced automation, we transform massive datasets into clear, winning strategies, ensuring our team can work with precision while our clients stay ahead of the field.</p>`},terms:{title:"TERMS OF SERVICE",body:`<p>LS Publication is a premium sports data analysis firm specializing in international horse racing markets. Established in Sri Lanka, we provide real-time tracking, predictive analysis, and insider insights for the UK and Australian racing seasons. Our mission is to bridge the gap between complex racing data and actionable intelligence for our Employees and Customers. By utilizing advanced automation, we transform massive datasets into clear, winning strategies, ensuring our team can work with precision while our clients stay ahead of the field.</p>`},privacy:{title:"PRIVACY POLICY",body:`<p><b>Data Collection:</b> We log visitor names, IP addresses, and session times solely for security and internal analytics purposes.</p><p><b>Security:</b> Your data is protected via Firebase encrypted databases. We never share your credentials with third parties.</p>`}};function openModal(t){const e=document.getElementById("info-modal");document.getElementById("modal-title").innerText=modalContent[t].title,document.getElementById("modal-content").innerHTML=modalContent[t].body,e.style.display="flex"}function closeModal(){document.getElementById("info-modal").style.display="none"}window.onclick=function(t){const e=document.getElementById("info-modal");t.target==e&&closeModal()};
+
+// UPDATED LOCAL VIDEO CONTROLS
+const video = document.getElementById('bg-video');
+const muteBtn = document.getElementById('mute-toggle');
+
+muteBtn.addEventListener('click', () => {
+    if (video.muted) {
+        video.muted = false;
+        muteBtn.innerHTML = "🔊";
+    } else {
+        video.muted = true;
+        muteBtn.innerHTML = "🔇";
+    }
+});
+
+function openSite(t){window.open(t,"_blank")}function underMaintenance(){alert("🚧 This tracker is currently under maintenance. Please check back later!")}const themeToggle=document.getElementById("theme-toggle"),body=document.body;themeToggle.addEventListener("click",(()=>{body.classList.toggle("light-mode");const t=body.classList.contains("light-mode");themeToggle.innerHTML=t?"☀️":"🌙",themeToggle.setAttribute("aria-label",t?"Switch to Dark Mode":"Switch to Light Mode"),t?video.pause():video.play()}));function scrollToTop(){window.scrollTo({top:0,behavior:"smooth"})}function scrollToBottom(){window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})}function openInNewTab(t){const e=window.location.href.split("#")[0];window.open(e+t,"_blank")}let currentLayout=0;const layoutToggleBtn=document.getElementById("layout-toggle"),mainContent=document.getElementById("main-content"),layoutModes=["Default","Desktop","Mobile"],layoutClasses=["","desktop-layout","mobile-layout"];function toggleLayoutMode(){currentLayout=(currentLayout+1)%layoutModes.length,layoutToggleBtn.textContent=layoutModes[currentLayout],mainContent.classList.remove("desktop-layout","mobile-layout"),currentLayout>0&&mainContent.classList.add(layoutClasses[currentLayout]),mainContent.scrollIntoView({behavior:"smooth",block:"start"})}function updateTimes(){let t=new Date,e=t.toLocaleString("en-GB",{timeZone:"Europe/London",hour12:!0});document.getElementById("uk-time").innerText="🇬🇧 UK : "+e;let n=t.toLocaleString("en-GB",{timeZone:"Asia/Colombo",hour12:!0});document.getElementById("sl-time").innerText="🇱🇰 SL : "+n;let o=t.toLocaleString("en-GB",{timeZone:"Australia/Sydney",hour12:!0});document.getElementById("aus-time").innerText="🇦🇺 AUS : "+o;const a=t.toLocaleString("en-GB",{timeZone:"Asia/Colombo",hour:"2-digit",minute:"2-digit"}),l=t.toLocaleString("en-GB",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"}),s=t.toLocaleString("en-GB",{timeZone:"Australia/Sydney",hour:"2-digit",minute:"2-digit"}),r=document.getElementById("time-display-sl");r&&(r.innerText=a);const d=document.getElementById("time-display-uk");d&&(d.innerText=l);const i=document.getElementById("time-display-aus");i&&(i.innerText=s)}setInterval(updateTimes,1e3),updateTimes();function updateOffsetOptions(){const t=document.getElementById("country").value,e=document.getElementById("offset");e.innerHTML="";let n=[];"AUS"===t?n=["+06:30 (AEST/Daylight)","+07:30 (ACST/Standard)"]:"UK"===t&&(n=["+04:30 (GMT)","+05:30 (BST)"]);const o=document.createElement("option");o.value="",o.text="Select Offset...",e.appendChild(o),n.forEach((t=>{const n=document.createElement("option");n.value=t.split(" ")[0],n.text=t,e.appendChild(n)}))}updateOffsetOptions();function convert(){const t=document.getElementById("userTime").value,e=document.getElementById("offset").value,n=document.getElementById("output");if(!t||!e)return void(n.innerText="Error: Enter Time & Select Offset!");let[o,a]=t.split(":").map(Number);const l="+"===e[0]?1:-1;let[s,r]=e.slice(1).split(":").map(Number);let d=o*60+a+l*(60*s+r);d=(d%1440+1440)%1440;let i=Math.floor(d/60),u=d%60,c=("0"+i).slice(-2)+":"+("0"+u).slice(-2);n.innerText="🇱🇰 SL Time: "+c;const m=window.open("","_blank","width=300,height=200");m.document.write("<h1 style='font-family:sans-serif; text-align:center;'>SL Time: "+c+"</h1>")}function applyMonthlyUpdates(){const t=[{name:"Magic Millions",greet:"🎉 Happy New Year | 🏇 Carnival Season"},{name:"Blue Diamond",greet:"❄️ Stay Warm | 💎 Diamond Day"},{name:"Cheltenham Festival",greet:"🌱 Fresh Season | 🏆 Festival Glory"},{name:"Grand National",greet:"🌸 Happy Spring | 🏇 National Spirit"},{name:"Classic Trials",greet:"🏇 Race Season | 🌹 Classic Trials"},{name:"Royal Ascot",greet:"☀️ Summer Racing | 🎩 Royal Pageantry"},{name:"July Festival",greet:"🔥 Heat on Track | ☀️ Summer Sprint"},{name:"Ebor Prestige",greet:"🌊 Golden Days | 🏹 Ebor Prestige"},{name:"Classic Stakes",greet:"🍂 Fall Insights | 📜 Classic Stakes"},{name:"Reach the Peak",greet:"🎃 Spooky Wins | 🏔️ Reach the Peak"},{name:"Melbourne Cup",greet:"🌩️ Cold Strikes | 🇦🇺 Race That Stops a Nation"},{name:"Christmas / King George VI",greet:"🎄 Merry Christmas | 🏇 Boxing Day Classics"}],e=new Date,n=e.getMonth(),o=t[n],a=document.getElementById("monthly-greeting"),l=document.getElementById("snow-overlay");document.title="LSPublication|AGCN - "+o.name,a.innerText=o.greet,11===n?(l.style.display="block",a.style.color="#ff4d4d"):(l.style.display="none",a.style.color="var(--light-green)")}applyMonthlyUpdates();
+
+/* AUTO HIGHLIGHT LOGIC FOR BOTH TABLES & AUTO SCROLL */
+function highlightNextEvent() {
+    const tableIds = ['#equestrianTable', '#australiaTable'];
+    const today = new Date();
+
+    tableIds.forEach(id => {
+        const rows = document.querySelectorAll(id + ' tbody tr');
+        let closestEventRow = null;
+        let minDiff = Infinity;
+
+        rows.forEach(row => {
+            const eventDate = new Date(row.getAttribute('data-date'));
+            const diff = eventDate - today;
+
+            // Mark expired events (optional gray out)
+            if (diff < -86400000) {
+                row.style.opacity = "0.5";
+            }
+
+            // Find closest event in the future OR today
+            if (diff >= -86400000 && diff < minDiff) { 
+                minDiff = diff;
+                closestEventRow = row;
+            }
+        });
+
+        if (closestEventRow) {
+            closestEventRow.classList.add('next-event-row');
+            const eventCell = closestEventRow.cells[0];
+            if (!eventCell.innerHTML.includes("NEXT UP")) {
+                eventCell.innerHTML = `<span class="next-badge">NEXT UP</span>` + eventCell.innerHTML;
+            }
+            
+            // Auto scroll to the next event within the scroll container
+            setTimeout(() => {
+                closestEventRow.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+            }, 1000);
+        }
+    });
+}
+</script>
+</body>
+</html>
