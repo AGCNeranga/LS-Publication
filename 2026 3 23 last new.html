@@ -238,12 +238,21 @@
 
 <script>
     document.addEventListener('contextmenu', e => e.preventDefault());
-    document.onkeydown = function(e) {
-        if (e.keyCode == 123) return false; // F12
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Inspect
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Inspect
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Console
-        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // View Source
+   document.onkeydown = (e) => {
+        // Prevent F12
+        if (e.keyCode == 123) return false;
+
+        // Prevent Ctrl + Shift + I/J/C (Windows/Linux)
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74 || e.keyCode == 67)) return false;
+
+        // Prevent Ctrl + U (View Source)
+        if (e.ctrlKey && e.keyCode == 85) return false;
+
+        // Prevent Cmd + Option + I/J/U/C (Mac)
+        if (e.metaKey && e.altKey && (e.keyCode == 73 || e.keyCode == 74 || e.keyCode == 85 || e.keyCode == 67)) return false;
+        
+        // Prevent Cmd + U (Mac View Source)
+        if (e.metaKey && e.keyCode == 85) return false;
     };
 </script>
 
@@ -372,7 +381,7 @@
     <h3 class="upcoming-title">UPCOMING RACING EVENTS</h3>
     <div class="news-grid">
         <article class="news-card">
-            <img src="c1.png" class="news-img" alt="Cheltenham">
+            <img src="https://e0.365dm.com/26/03/1600x900/skysports-paul-townend-cheltenham-festival_7191495.jpg?20260313163908" class="news-img" alt="END">
             <div class="news-content">
                 <span class="news-tag">March 10th – 13th, 2026</span>
                 <h4>Cheltenham Festival</h4>
@@ -508,10 +517,13 @@ The main event, the Randox Grand National, is a thrilling 4-mile marathon featur
     
     <div class="content-section" style="border-top-color: var(--light-green);">
         <h3>🇬🇧 UNITED KINGDOM</h3>
-        <a href="https://agcneranga.github.io/UK-VIP/" target="_blank" class="tracker-link">Top UK Race 1 Tracker <span class="ai-insight-badge">TOP</span></a>
+        <a href="https://agcneranga.github.io/UK-VIP/" target="_blank" class="tracker-link">Top UK Race Tracker <span class="ai-insight-badge">TOP</span></a>
         <a href="https://agcneranga.github.io/UKVIP2/" target="_blank" class="tracker-link">VIP RACE GUIDE(THE STABLES)<span class="ai-insight-badge">VIP</span></a>
-        <a href="https://agcneranga.github.io/uk-EXCEL-pro/" target="_blank" class="tracker-link">UK Excel Tracker <span class="ai-insight-badge">NEW</span> </a>
+        <a href="https://agcneranga.github.io/uk-EXCEL-pro/" target="_blank" class="tracker-link">UK Excel Tracker <span class="ai-insight-badge">EDIT</span> </a>
         <a href="https://agcneranga.github.io/UKVIPTIPS/" target="_blank" class="tracker-link">UK VIP TIPS Tracker </a>
+         <a href="https://atrukpng.netlify.app/" target="_blank" class="tracker-link">Jacket Ante-Post <span class="ai-insight-badge">UK</span> </a>
+
+        
     </div>
 
     <div class="content-section" style="border-top-color: var(--yellow-highlight);">
@@ -520,17 +532,21 @@ The main event, the Randox Grand National, is a thrilling 4-mile marathon featur
         <a href="https://agcneranga.github.io/AUS-KH/" target="_blank" class="tracker-link">AUSSI v9.00 (HARR) Marker<span class="ai-insight-badge">EDIT</span></a>
         <a href="https://agcneranga.github.io/AUS-Horsecodes/" target="_blank" class="tracker-link">AUSSI Code Abbrevation Marker<span class="ai-insight-badge">NEW</span></a>
         <a href="https://agcneranga.github.io/AUSSI-F-Page/" target="_blank" class="tracker-link">AUSSI FIRST PAGE</a>
+        <a href="https://auspuntersjpdf.netlify.app/" target="_blank" class="tracker-link">Jacket Colour Card<span class="ai-insight-badge">AUS</span></a>
+
     </div>
 
    
 
     <div class="content-section" style="border-top-color: var(--dark-red);">
-        <h3> 🇬🇧 EXTRA </h3>
-        <a href="https://agcneranga.github.io/UK-DAILY-RACE/" target="_blank" class="tracker-link">DAILY RACING PROGRAMME<span class="ai-insight-badge">NEW</span></a>
+        <h3> EXTRA </h3>
+        <a href="https://agcneranga.github.io/UK-DAILY-RACE/" target="_blank" class="tracker-link">DAILY RACING PROGRAMME<span class="ai-insight-badge">EDIT</span></a>
         <a href="https://lsrating.netlify.app/" target="_blank" class="tracker-link">Rating System(UK) imac <span class="ai-insight-badge">NEW</span></a>
         <a href="https://windowsrating.netlify.app/" target="_blank" class="tracker-link">Rating System(UK) Windows <span class="ai-insight-badge">NEW</span></a>
-        <a href="https://ukfestivals2026.netlify.app/" target="_blank" class="tracker-link">UK FESTIVAL Ante-Post<span class="ai-insight-badge">NEW</span></a>
-
+        <a href="https://ukfestivals2026.netlify.app/" target="_blank" class="tracker-link">UK FESTIVAL Ante-Post<span class="ai-insight-badge">EDIT</span></a>
+        <a href="https://lsctp.netlify.app/" target="_blank" class="tracker-link">LS Production Live Tracker<span class="ai-insight-badge">Check</span></a>
+        <a href="https://lsempclearance.netlify.app/" target="_blank" class="tracker-link">LS Clearance Form<span class="ai-insight-badge">HR/FINANCE</span></a>
+        <a href="https://lssportsevnt.netlify.app/" target="_blank" class="tracker-link">Annual Sports events plan<span class="ai-insight-badge">SPORTS</span></a>
 
     </div>
 
@@ -784,3 +800,6 @@ function highlightNextEvent() {
 </script>
 </body>
 </html>
+
+
+
